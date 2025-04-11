@@ -1,7 +1,7 @@
 import React from "react";
 
-interface GreetingContent {
-  greeting: string;
+interface HeroContent {
+  hero: string;
   brief: React.ReactNode;
 }
 
@@ -28,8 +28,8 @@ interface ProjectContent {
   image: string;
 }
 
-const greetingContent: GreetingContent = {
-  greeting: "Hi, I'm Poom Chuthamsatid",
+const heroContent: HeroContent = {
+  hero: "Hi, I'm Poom Chuthamsatid",
   brief: (
     <>
       I'm a fifth-year software engineering student with 2 years of industry
@@ -188,7 +188,7 @@ const projectContent: ProjectContent[] = [
 ];
 
 const contents = {
-  greeting: greetingContent,
+  hero: heroContent,
   experiences: {
     heading: "Experience",
     experience: experienceContent,
@@ -221,7 +221,7 @@ export default contents;
 export { ContentsProvider, useContents };
 export type {
   Contents,
-  GreetingContent,
+  HeroContent,
   ExperienceContent,
   EducationContent,
   ProjectContent,

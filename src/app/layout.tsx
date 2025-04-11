@@ -1,14 +1,13 @@
-import { Geist, Geist_Mono } from "next/font/google";
+// layout.tsx
+import { Inter as FontSans } from "next/font/google";
+import { cn } from "@/app/lib/shadcn/utils";
+import StyledComponentsRegistry from "@/app/lib/registry";
 import "./styles/globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fontSans = FontSans({
+  variable: "--font-sans",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata = {
@@ -16,17 +15,11 @@ export const metadata = {
   description: "This is the layout for the app",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang='en'>
+      <body className={cn("font-sans antialiased", fontSans.variable)}>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
   );
