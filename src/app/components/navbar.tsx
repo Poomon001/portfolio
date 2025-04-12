@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+/**
+ * A page fNavbar powered by Tailwind CSS Navbar - Flowbite
+ **/
+import { useState } from "react";
 import styled from "styled-components";
 
 const Nav = styled.nav`
   background-color: white;
   border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   @media (prefers-color-scheme: dark) {
     background-color: #111827;
     border-color: #374151;
@@ -80,7 +86,7 @@ const NavMenu = styled.div<{ open: boolean }>`
   }
 `;
 
-const NavList = styled.ul`
+const NavList = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -97,7 +103,7 @@ const NavList = styled.ul`
   }
 `;
 
-const NavItem = styled.li`
+const NavItem = styled.div`
   a {
     display: block;
     padding: 0.5rem 0.75rem;
@@ -133,9 +139,9 @@ const Navbar = () => {
   return (
     <Nav>
       <NavContainer>
-        <Brand href='https://flowbite.com/'>
+        <Brand href='#'>
           <img src='https://flowbite.com/docs/images/logo.svg' alt='Logo' />
-          <span>Flowbite</span>
+          <span>PC</span>
         </Brand>
 
         <ToggleButton onClick={() => setMenuOpen((prev) => !prev)} aria-label='Toggle navigation'>
@@ -147,21 +153,13 @@ const Navbar = () => {
         <NavMenu open={menuOpen}>
           <NavList>
             <NavItem>
-              <a href='#' className='active'>
-                Home
-              </a>
+              <a href='#Experience'>Experience</a>
             </NavItem>
             <NavItem>
-              <a href='#'>About</a>
+              <a href='#Projects'>Projects</a>
             </NavItem>
             <NavItem>
-              <a href='#'>Services</a>
-            </NavItem>
-            <NavItem>
-              <a href='#'>Pricing</a>
-            </NavItem>
-            <NavItem>
-              <a href='#'>Contact</a>
+              <a href='#Awards'>Awards</a>
             </NavItem>
           </NavList>
         </NavMenu>
