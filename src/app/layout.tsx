@@ -11,8 +11,8 @@ const fontSans = FontSans({
 });
 
 export const metadata = {
-  title: "My Application - Layout",
-  description: "This is the layout for the app",
+  title: "Poom Chuthamsatid",
+  description: "This is the layout for the portfolio",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
