@@ -1,13 +1,11 @@
-/**
- * A page footer powered by Tailwind CSS Footer - Flowbite.
- **/
 import styled from "styled-components";
+import { GitHub as GitHubIcon, LinkedIn as LinkedInIcon } from "@mui/icons-material";
+import SocialLink from "@/app/components/socialLink";
 
 const FooterContainer = styled.footer`
-  background-color: white;
-  margin: 1rem;
-  padding: 0.5rem; /* Smaller padding */
   background-color: #fff;
+  margin: 1rem;
+  padding: 0.5rem;
   transition: background-color 0.3s ease;
 
   @media (prefers-color-scheme: dark) {
@@ -32,7 +30,7 @@ const FooterContent = styled.div`
 
 const FooterText = styled.span`
   text-align: center;
-  font-size: 0.875rem; /* Slightly smaller font */
+  font-size: 0.875rem;
   color: #374151;
   font-weight: 500;
 
@@ -54,14 +52,13 @@ const FooterText = styled.span`
 
 const FooterLink = styled.a`
   text-align: center;
-  font-size: 0.875rem; /* Slightly smaller font */
+  font-size: 0.875rem;
   color: #374151;
   font-weight: 500;
-  text-decoration: none; /* Removes underline */
+  text-decoration: none;
 
   &:hover {
-    color: inherit; /* Ensures no color change on hover */
-    text-decoration: none; /* Ensures no underline on hover */
+    text-decoration: underline;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -69,10 +66,25 @@ const FooterLink = styled.a`
   }
 `;
 
-const FooterComponent = () => {
+const SocialRow = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+`;
+
+const Footer = () => {
   return (
     <FooterContainer>
       <FooterContent>
+        <SocialRow>
+          <SocialLink href='https://github.com/Poomon001' icon={<GitHubIcon />} label='GitHub' />
+          <SocialLink
+            href='https://www.linkedin.com/in/poomrapee-chuthamsatid-04b31119a/'
+            icon={<LinkedInIcon />}
+            label='LinkedIn'
+          />
+        </SocialRow>
+        <br />
         <FooterText>
           <FooterLink href='https://github.com/Poomon001/portfolio' target='_blank' rel='noopener noreferrer'>
             Created by Poom Chuthamsatid powered by Next.js and TypeScript
@@ -83,4 +95,4 @@ const FooterComponent = () => {
   );
 };
 
-export default FooterComponent;
+export default Footer;
