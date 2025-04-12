@@ -34,28 +34,37 @@ const SectionTitle = styled.h2`
   }
 `;
 
+const TimelineContainer = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+`;
+
 const Experience = () => {
   const contents = useContents();
   const experience = contents.experience.experiences as ExperienceContent[];
   return (
     <StyledExperienceSection id='Experience'>
-      <Timeline>
+      <TimelineContainer>
         <SectionTitle>Experience</SectionTitle>
-        {experience.map((item, index) => (
-          <TimelineItem key={index}>
-            <TimelinePoint />
-            <TimelineTime>{item.date}</TimelineTime>
-            <TimelineTitle>
-              {item.position} | {item.company}
-            </TimelineTitle>
-            <TimelineDesc>
-              {item.achievements.map((achievement, i) => (
-                <div key={i}>{achievement}</div>
-              ))}
-            </TimelineDesc>
-          </TimelineItem>
-        ))}
-      </Timeline>
+        <Timeline>
+          {experience.map((item, index) => (
+            <TimelineItem key={index}>
+              <TimelinePoint />
+              <TimelineTime>{item.date}</TimelineTime>
+              <TimelineTitle>
+                {item.position} | {item.company}
+              </TimelineTitle>
+              <TimelineDesc>
+                {item.achievements.map((achievement, i) => (
+                  <div key={i}>{achievement}</div>
+                ))}
+              </TimelineDesc>
+            </TimelineItem>
+          ))}
+        </Timeline>
+      </TimelineContainer>
     </StyledExperienceSection>
   );
 };
