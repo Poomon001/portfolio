@@ -1,7 +1,7 @@
 import React from "react";
-import { WavyBackground } from "@/app/components/shadcn/ui/wavy-background";
+import Background from "@/components/background";
 import styled from "styled-components";
-import { useContents } from "@/app/contexts/contents";
+import { useContents } from "@/contexts/contents";
 
 const StyledHeroSection = styled.section`
   display: flex;
@@ -47,10 +47,10 @@ const Hero = () => {
 
   return (
     <StyledHeroSection>
-      <WavyBackground>
+      <Background>
         <HeroTitle>{contents.hero.heading}</HeroTitle>
         <HeroSubtitle>{contents.hero.brief}</HeroSubtitle>
-      </WavyBackground>
+      </Background>
     </StyledHeroSection>
   );
 };

@@ -7,9 +7,9 @@ import {
   TimelineTime,
   TimelineTitle,
   TimelineDesc,
-} from "@/app/components/timeline";
-import { useContents } from "@/app/contexts/contents";
-import type { ExperienceContent } from "@/app/contexts/contents";
+} from "@/components/timeline";
+import { useContents } from "@/contexts/contents";
+import type { ExperienceContent } from "@/contexts/contents";
 
 const StyledExperienceSection = styled.section`
   display: flex;

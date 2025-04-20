@@ -1,8 +1,8 @@
 // layout.tsx
 import { Inter as FontSans } from "next/font/google";
-import { cn } from "@/app/lib/shadcn/utils";
-import StyledComponentsRegistry from "@/app/lib/registry";
-import "./styles/globals.css";
+import { cn } from "@/lib/shadcn/utils";
+import StyledComponentsRegistry from "@/lib/registry";
+import "@/styles/globals.css";
 
 const fontSans = FontSans({
   variable: "--font-sans",

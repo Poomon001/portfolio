@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "@/app/components/card";
-import { useContents } from "@/app/contexts/contents";
-import type { ProjectContent } from "@/app/contexts/contents";
+import Card from "@/components/card";
+import { useContents } from "@/contexts/contents";
+import type { ProjectContent } from "@/contexts/contents";
 import styled from "styled-components";
 
 const StyledProjectSection = styled.section`

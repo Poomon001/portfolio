@@ -1,5 +1,5 @@
 /**
- * A page fNavbar powered by Tailwind CSS Navbar - Flowbite
+ * A page Navbar powered by Tailwind CSS Navbar - Flowbite
  **/
 import { useState } from "react";
 import styled from "styled-components";

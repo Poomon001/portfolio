@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { GitHub as GitHubIcon, LinkedIn as LinkedInIcon } from "@mui/icons-material";
-import SocialLink from "@/app/components/socialLink";
+import SocialLink from "@/components/socialLink";
 
 const FooterContainer = styled.footer`
   background-color: #fff;
