@@ -23,7 +23,7 @@ const Background = ({ children }: { children: React.ReactNode }) => {
           scale: 1.0,
           scaleMobile: 1.0,
           color: 0x0,
-          shininess: 20.0,
+          shininess: 50.0,
           zoom: 0.84,
         })
       );
@@ -35,8 +35,8 @@ const Background = ({ children }: { children: React.ReactNode }) => {
   }, [vantaEffect]);
 
   return (
-    <div ref={vantaRef} style={{ width: "100%", height: "100vh" }}>
-      <div style={{ position: "relative", zIndex: 1 }}>{children}</div>
+    <div ref={vantaRef} style={{ position: "relative", zIndex: 1 }}>
+      {children}
     </div>
   );
 };

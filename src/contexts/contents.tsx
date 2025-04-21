@@ -29,7 +29,7 @@ interface ProjectContent {
 }
 
 const heroContent: HeroContent = {
-  heading: "Hi, I'm Poom Chuthamsatid",
+  heading: "Hi, I'm Poom",
   brief: (
     <>
       I'm a fifth-year software engineering student with 2 years of industry experience
