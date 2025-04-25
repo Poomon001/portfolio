@@ -18,9 +18,6 @@ const StyledExperienceSection = styled.section`
   justify-content: flex-start; /* content starts from top */
   padding: 4rem 1rem; /* adjust as needed */
   min-height: 100vh; /* ensures at least full screen */
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
 `;
 
 const SectionTitle = styled.h2`

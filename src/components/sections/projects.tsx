@@ -6,14 +6,11 @@ import styled from "styled-components";
 
 const StyledProjectSection = styled.section`
   display: flex;
-  flex-direction: column; /* ensures vertical stacking */
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* content starts from top */
-  padding: 4rem 1rem; /* adjust as needed */
-  min-height: 100vh; /* ensures at least full screen */
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  justify-content: flex-start;
+  padding: 4rem 1rem;
+  min-height: 100vh;
 `;
 
 const SectionTitle = styled.h2`

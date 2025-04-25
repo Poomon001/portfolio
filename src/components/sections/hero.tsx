@@ -4,18 +4,14 @@ import styled from "styled-components";
 import { useContents } from "@/contexts/contents";
 
 const StyledHeroSection = styled.section`
-  position: relative;
-  min-height: calc(100svh - 4rem);
   display: flex;
   flex-direction: column;
+  position: relative;
+  min-height: calc(100svh - 4rem);
   justify-content: center;
-  width: 100%;
   margin: 0 auto;
-`;
-
-const ContentContainer = styled.div`
-  max-width: 1280px;
-  padding: 0 6rem;
+  max-width: 1200px;
+  padding: 0 4rem;
 `;
 
 const HeroTitle = styled.h1`
@@ -53,10 +49,8 @@ const Hero = () => {
   return (
     <Background>
       <StyledHeroSection>
-        <ContentContainer>
-          <HeroTitle>{contents.hero.heading}</HeroTitle>
-          <HeroSubtitle>{contents.hero.brief}</HeroSubtitle>
-        </ContentContainer>
+        <HeroTitle>{contents.hero.heading}</HeroTitle>
+        <HeroSubtitle>{contents.hero.brief}</HeroSubtitle>
       </StyledHeroSection>
     </Background>
   );
