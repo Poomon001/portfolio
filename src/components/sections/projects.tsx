@@ -18,10 +18,6 @@ const SectionTitle = styled.h2`
   font-weight: 700;
   color: #111827;
   text-align: center;
-
-  @media (min-width: 768px) {
-    font-size: 2.5rem;
-  }
 `;
 
 const Projects = () => {

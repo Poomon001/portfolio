@@ -12,6 +12,10 @@ const StyledHeroSection = styled.section`
   margin: 0 auto;
   max-width: 1200px;
   padding: 0 4rem;
+
+  @media (min-width: 1800px) {
+    max-width: 1480px;
+  }
 `;
 
 const HeroTitle = styled.h1`
