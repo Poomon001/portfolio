@@ -7,9 +7,9 @@ import {
   TimelineTime,
   TimelineTitle,
   TimelineDesc,
-} from "@/app/components/timeline";
-import { useContents } from "@/app/contexts/contents";
-import type { ExperienceContent } from "@/app/contexts/contents";
+} from "@/components/timeline";
+import { useContents } from "@/contexts/contents";
+import type { ExperienceContent } from "@/contexts/contents";
 
 const StyledExperienceSection = styled.section`
   display: flex;
@@ -18,9 +18,6 @@ const StyledExperienceSection = styled.section`
   justify-content: flex-start; /* content starts from top */
   padding: 4rem 1rem; /* adjust as needed */
   min-height: 100vh; /* ensures at least full screen */
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
 `;
 
 const SectionTitle = styled.h2`
@@ -28,10 +25,6 @@ const SectionTitle = styled.h2`
   font-weight: 700;
   color: #111827;
   text-align: center;
-
-  @media (min-width: 768px) {
-    font-size: 2.5rem;
-  }
 `;
 
 const TimelineContainer = styled.div`

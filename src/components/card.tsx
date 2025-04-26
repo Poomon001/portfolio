@@ -1,6 +1,9 @@
+/**
+ * A card powered by Tailwind CSS Card - Flowbite
+ **/
 import React from "react";
 import styled from "styled-components";
-import type { ProjectContent } from "@/app/contexts/contents";
+import type { ProjectContent } from "@/contexts/contents";
 
 const CardContainer = styled.div`
   display: flex;

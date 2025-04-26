@@ -1,5 +1,5 @@
 /**
- * A page fNavbar powered by Tailwind CSS Navbar - Flowbite
+ * A page Navbar powered by Tailwind CSS Navbar - Flowbite
  **/
 import { useState } from "react";
 import styled from "styled-components";
@@ -10,6 +10,7 @@ const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
+
   @media (prefers-color-scheme: dark) {
     background-color: #111827;
     border-color: #374151;
@@ -17,9 +18,7 @@ const Nav = styled.nav`
 `;
 
 const NavContainer = styled.div`
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -40,7 +39,7 @@ const Brand = styled.a`
     font-size: 1.5rem;
     font-weight: 600;
     color: #111;
-    white-space: nowrap;
+
     @media (prefers-color-scheme: dark) {
       color: white;
     }
@@ -49,15 +48,10 @@ const Brand = styled.a`
 
 const ToggleButton = styled.button`
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
   padding: 0.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
   color: #6b7280;
   background: transparent;
   border: none;
-  border-radius: 0.375rem;
   cursor: pointer;
 
   &:hover {
@@ -92,7 +86,6 @@ const NavList = styled.div`
   padding: 1rem;
   border-radius: 0.5rem;
   background-color: #f9fafb;
-  border: 1px solid #f3f4f6;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -109,7 +102,6 @@ const NavItem = styled.div`
     padding: 0.5rem 0.75rem;
     color: #111827;
     text-decoration: none;
-    border-radius: 0.25rem;
 
     &:hover {
       background-color: #f3f4f6;
@@ -121,15 +113,10 @@ const NavItem = styled.div`
 
     @media (prefers-color-scheme: dark) {
       color: white;
-
       &:hover {
         background-color: #374151;
       }
     }
-  }
-
-  .active {
-    color: #2563eb;
   }
 `;
 

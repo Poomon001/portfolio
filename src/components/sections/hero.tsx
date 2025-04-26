@@ -1,44 +1,49 @@
 import React from "react";
-import { WavyBackground } from "@/app/components/shadcn/ui/wavy-background";
+import Background from "@/components/background";
 import styled from "styled-components";
-import { useContents } from "@/app/contexts/contents";
+import { useContents } from "@/contexts/contents";
 
 const StyledHeroSection = styled.section`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  position: relative;
+  min-height: calc(100svh - 4rem);
   justify-content: center;
-  height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 4rem;
+
+  @media (min-width: 1800px) {
+    max-width: 1480px;
+  }
 `;
 
 const HeroTitle = styled.h1`
   color: white;
-  font-size: 1.5rem; /* text-2xl */
-  font-weight: bold;
-  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
   font-family: var(--font-sans);
+  text-align: left;
+  margin: 25px 0px;
 
   @media (min-width: 768px) {
-    font-size: 2.25rem; /* md:text-4xl */
+    font-size: 2.5rem;
   }
 
   @media (min-width: 1024px) {
-    font-size: 4.5rem; /* lg:text-7xl */
+    font-size: 4rem;
   }
 `;
 
 const HeroSubtitle = styled.p`
   color: white;
-  font-size: 1rem; /* text-base */
+  font-size: 0.75rem;
   font-weight: normal;
-  text-align: center;
   font-family: var(--font-sans);
-  margin-top: 1rem;
+  max-width: 750px;
 
   @media (min-width: 768px) {
-    font-size: 1.125rem; /* md:text-lg */
+    font-size: 1rem;
   }
 `;
 
@@ -46,12 +51,12 @@ const Hero = () => {
   const contents = useContents();
 
   return (
-    <StyledHeroSection>
-      <WavyBackground>
+    <Background>
+      <StyledHeroSection>
         <HeroTitle>{contents.hero.heading}</HeroTitle>
         <HeroSubtitle>{contents.hero.brief}</HeroSubtitle>
-      </WavyBackground>
-    </StyledHeroSection>
+      </StyledHeroSection>
+    </Background>
   );
 };
 

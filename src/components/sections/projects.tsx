@@ -1,19 +1,16 @@
 import React from "react";
-import Card from "@/app/components/card";
-import { useContents } from "@/app/contexts/contents";
-import type { ProjectContent } from "@/app/contexts/contents";
+import Card from "@/components/card";
+import { useContents } from "@/contexts/contents";
+import type { ProjectContent } from "@/contexts/contents";
 import styled from "styled-components";
 
 const StyledProjectSection = styled.section`
   display: flex;
-  flex-direction: column; /* ensures vertical stacking */
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* content starts from top */
-  padding: 4rem 1rem; /* adjust as needed */
-  min-height: 100vh; /* ensures at least full screen */
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  justify-content: flex-start;
+  padding: 4rem 1rem;
+  min-height: 100vh;
 `;
 
 const SectionTitle = styled.h2`
@@ -21,10 +18,6 @@ const SectionTitle = styled.h2`
   font-weight: 700;
   color: #111827;
   text-align: center;
-
-  @media (min-width: 768px) {
-    font-size: 2.5rem;
-  }
 `;
 
 const Projects = () => {
