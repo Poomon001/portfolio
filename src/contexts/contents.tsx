@@ -6,6 +6,7 @@ interface HeroContent {
 }
 
 interface ExperienceContent {
+  id: string;
   company: string;
   position: string;
   location: string;
@@ -16,9 +17,18 @@ interface ExperienceContent {
 }
 
 interface EducationContent {
+  id: string;
   description: string;
   date: string;
   isWorkExperience: boolean;
+}
+
+interface TestimonialContent {
+  id: string;
+  testimonial: string;
+  source: string;
+  company: string;
+  date: string;
 }
 
 interface ProjectContent {
@@ -41,6 +51,7 @@ const heroContent: HeroContent = {
 
 const experienceContent: (ExperienceContent | EducationContent)[] = [
   {
+    id: "01012025",
     company: "Kinsol Research Inc",
     position: "AI Software Developer Intern",
     location: "Victoria BC, Canada",
@@ -57,9 +68,10 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
       </p>,
     ],
     isWorkExperience: true,
-    skills: [],
+    skills: ["Python", "Docker", "SQL"],
   },
   {
+    id: "01092024",
     company: "Arista Networks",
     position: "Software Developer Intern",
     location: "Vancouver BC, Canada",
@@ -75,27 +87,30 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
       </p>,
     ],
     isWorkExperience: true,
-    skills: [],
+    skills: ["Python", "Docker", "SQL"],
   },
   {
-    company: "University of Victoria",
-    position: "Algorithms Teaching Assistant",
-    location: "Victoria BC, Canada",
-    date: "May 2023 - Aug 2024",
-    achievements: [
-      <p>
-        Guided and clarified concepts in Algorithms & Data Structures II for over 300 undergraduate students, including
-        topics in Hash Table, Dynamic Programming, String Searching, Tree, and Graph Theory.
-      </p>,
-      <p>
-        Led weekly labs to teach algorithm implementation in Java, earning 3 contract extensions for outstanding
-        performance.
-      </p>,
-    ],
-    isWorkExperience: true,
-    skills: [],
+    id: "01052024",
+    description:
+      "Teaching Assistant: Led weekly labs for Algorithms and Data Structures II while studying at the University of Victoria.",
+    date: "May 2024 - Aug 2024",
+    isWorkExperience: false,
   },
   {
+    id: "01012024",
+    description: "Ongoing: Continued Software Engineering at the University of Victoria.",
+    date: "Jan 2024 - Apr 2024",
+    isWorkExperience: false,
+  },
+  {
+    id: "01052023",
+    description:
+      "Teaching Assistant: Led weekly labs for Algorithms and Data Structures II while studying at the University of Victoria.",
+    date: "May 2023 - Dec 2023",
+    isWorkExperience: false,
+  },
+  {
+    id: "01092022",
     company: "Visier Inc",
     position: "Software Developer Intern",
     location: "Vancouver BC, Canada",
@@ -115,9 +130,16 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
       </p>,
     ],
     isWorkExperience: true,
-    skills: [],
+    skills: ["Python", "Docker", "SQL"],
   },
   {
+    id: "01012022",
+    description: "Ongoing: Continued Software Engineering at the University of Victoria.",
+    date: "Jan 2022 - Aug 2022",
+    isWorkExperience: false,
+  },
+  {
+    id: "01092021",
     company: "VertiGIS North America",
     position: "Software Test Engineer Intern",
     location: "Victoria BC, Canada",
@@ -132,9 +154,16 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
       </p>,
     ],
     isWorkExperience: true,
-    skills: [],
+    skills: ["Python", "Docker", "SQL"],
   },
   {
+    id: "01052021",
+    description: "Ongoing: Continued Software Engineering at the University of Victoria.",
+    date: "May 2021 - Aug 2021",
+    isWorkExperience: false,
+  },
+  {
+    id: "01012021",
     company: "Ruboss Technology",
     position: "Software Developer Intern",
     location: "Victoria BC, Canada",
@@ -147,7 +176,48 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
       <p>Created reusable React components to reduce redundancy in hierarchical navigation menu codebase.</p>,
     ],
     isWorkExperience: true,
-    skills: [],
+    skills: ["Python", "Docker", "SQL"],
+  },
+  {
+    id: "01082019",
+    description: "Academia: Started Software Engineering at the University of Victoria.",
+    date: "Sep 2019 - Dec 2020",
+    isWorkExperience: false,
+  },
+];
+
+const testimonialContent: TestimonialContent[] = [
+  {
+    id: "01",
+    testimonial:
+      "I was particularly impressed by his structured approach to prototyping — Poom thoughtfully evaluated multiple options and clearly laid out the trade-offs.",
+    source: "End-Term Recommendation",
+    company: "Kinsol",
+    date: "April 22, 2025",
+  },
+  {
+    id: "02",
+    testimonial:
+      "Poom has demonstrated well that he was going out of his comfort zone by learning new domains, new technology stacks, and different software development practices, which were highly focused on quality.",
+    source: "End-Term Review",
+    company: "Arista Network",
+    date: "December 16, 2024",
+  },
+  {
+    id: "03",
+    testimonial:
+      "Poom... managed the release of a critical feature, followed best coding practices, taken on feedback in an agile way, and has become an effective software developer.",
+    source: "End-Term Review",
+    company: "Visier",
+    date: "April 11, 2023",
+  },
+  {
+    id: "04",
+    testimonial:
+      "Poom created several automated functional tests... many of which required designing novel solutions and new page objects.",
+    source: "End-Term Review",
+    company: "VertiGIS",
+    date: "January 12, 2022",
   },
 ];
 

@@ -1,4 +1,7 @@
+- Uninstall shanUI and tailwind
 - Minimize CSS and make sure that it maintains funtionality and responsiveness
 - Make config for CSS
 - Make animation for scrolling
 - Ensure responsiveness
+- Add className
+- Make hero padding responsive

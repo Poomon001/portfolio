@@ -1,64 +1,41 @@
+import React from "react";
 import styled from "styled-components";
 
-export const Timeline = styled.div`
-  position: relative;
-  border-left: 1px solid #e5e7eb; /* light mode */
-  padding-left: 1rem;
+const StyledTimeline = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  flex-direction: column;
+`;
 
-  @media (prefers-color-scheme: dark) {
-    border-color: #374151; /* dark mode */
+const StyledTimelineItem = styled.div`
+  display: flex;
+  margin: 0.25rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 1152px) {
+    justify-content: flex-end;
+    width: 1000px;
   }
 `;
 
-export const TimelineItem = styled.div`
-  position: relative;
-  margin-bottom: 2.5rem;
-  margin-left: 1rem;
-`;
-
-export const TimelinePoint = styled.div`
-  position: absolute;
-  width: 0.75rem;
-  height: 0.75rem;
-  background-color: #e5e7eb;
-  border-radius: 9999px;
-  left: -1.25rem;
-  border: 1px solid white;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: #374151;
-    border-color: #111827;
+const Timeline = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => {
+    return <StyledTimeline ref={ref} className={className} {...props} />;
   }
-`;
+);
 
-export const TimelineTime = styled.time`
-  display: block;
-  margin-bottom: 0.25rem;
-  font-size: 0.875rem;
-  color: #9ca3af;
-
-  @media (prefers-color-scheme: dark) {
-    color: #6b7280;
+const TimelineItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => {
+    return <StyledTimelineItem ref={ref} className={className} {...props} />;
   }
-`;
+);
 
-export const TimelineTitle = styled.h3`
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #111827;
+Timeline.displayName = "TimelineContainer";
+TimelineItem.displayName = "TimelineItem";
 
-  @media (prefers-color-scheme: dark) {
-    color: white;
-  }
-`;
-
-export const TimelineDesc = styled.div`
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  color: #6b7280;
-
-  @media (prefers-color-scheme: dark) {
-    color: #9ca3af;
-  }
-`;
+export { Timeline, TimelineItem };
