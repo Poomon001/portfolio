@@ -1,6 +1,5 @@
 // layout.tsx
 import { Inter as FontSans } from "next/font/google";
-import { cn } from "@/lib/shadcn/utils";
 import StyledComponentsRegistry from "@/lib/registry";
 import "@/styles/globals.css";
 
@@ -18,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={cn("font-sans antialiased", fontSans.variable)}>
+      <body className={fontSans.variable}>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
