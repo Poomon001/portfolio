@@ -190,34 +190,34 @@ const testimonialContent: TestimonialContent[] = [
   {
     id: "01",
     testimonial:
-      "I was particularly impressed by his structured approach to prototyping — Poom thoughtfully evaluated multiple options and clearly laid out the trade-offs.",
-    source: "End-Term Recommendation",
+      "I was particularly impressed by his structured approach to prototyping— Poom thoughtfully evaluated multiple options and clearly laid out the trade-offs.",
+    source: "Recommendation",
     company: "Kinsol",
-    date: "April 22, 2025",
+    date: "Apr 2025",
   },
   {
     id: "02",
     testimonial:
-      "Poom has demonstrated well that he was going out of his comfort zone by learning new domains, new technology stacks, and different software development practices, which were highly focused on quality.",
-    source: "End-Term Review",
-    company: "Arista Network",
-    date: "December 16, 2024",
+      "Poom... managed the release of a critical feature, followed best coding practices, took on feedback in an agile way, and became an effective software developer.",
+    source: "Final Evaluation",
+    company: "Visier",
+    date: "Apr 2023",
   },
   {
     id: "03",
     testimonial:
-      "Poom... managed the release of a critical feature, followed best coding practices, taken on feedback in an agile way, and has become an effective software developer.",
-    source: "End-Term Review",
-    company: "Visier",
-    date: "April 11, 2023",
+      "Poom demonstrated well that he stepped out of his comfort zone by learning new domains, new technology stacks, and different software development practices— all highly focused on quality.",
+    source: "Final Evaluation",
+    company: "Arista Network",
+    date: "Dec 2024",
   },
   {
     id: "04",
     testimonial:
       "Poom created several automated functional tests... many of which required designing novel solutions and new page objects.",
-    source: "End-Term Review",
+    source: "Final Evaluation",
     company: "VertiGIS",
-    date: "January 12, 2022",
+    date: "Jan 2022",
   },
 ];
 
@@ -249,6 +249,7 @@ const contents = {
     heading: "Experience",
     experiences: experienceContent,
   },
+  testimonial: testimonialContent,
   project: {
     heading: "Project",
     projects: projectContent,
@@ -268,4 +269,4 @@ type ContentsProviderProps = React.PropsWithChildren<{ contents: Contents }>;
 
 export default contents;
 export { ContentsProvider, useContents };
-export type { Contents, HeroContent, ExperienceContent, EducationContent, ProjectContent };
+export type { Contents, HeroContent, ExperienceContent, EducationContent, TestimonialContent, ProjectContent };

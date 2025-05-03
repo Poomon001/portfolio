@@ -7,7 +7,7 @@ const StyledHeroSection = styled.section`
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: calc(100svh - 4rem);
+  min-height: calc(100vh - 4rem); /* subtract navbar height */
   justify-content: center;
   margin: 0 auto;
   max-width: 1200px;

@@ -12,10 +12,6 @@ const LinkWrapper = styled.a`
   &:hover {
     transform: scale(1.1);
     color: #2563eb;
-
-    @media (prefers-color-scheme: dark) {
-      color: #60a5fa;
-    }
   }
 `;
 

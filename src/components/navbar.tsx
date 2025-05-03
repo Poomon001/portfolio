@@ -1,5 +1,5 @@
 /**
- * A page Navbar powered by Tailwind CSS Navbar - Flowbite
+ * A page Navbar powered by CSS Navbar - Flowbite
  **/
 import { useState } from "react";
 import styled from "styled-components";
@@ -10,11 +10,6 @@ const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: #111827;
-    border-color: #374151;
-  }
 `;
 
 const NavContainer = styled.div`
@@ -38,18 +33,14 @@ const Brand = styled.a`
   span {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #111;
-
-    @media (prefers-color-scheme: dark) {
-      color: white;
-    }
+    color: #222;
   }
 `;
 
 const ToggleButton = styled.button`
   display: inline-flex;
   padding: 0.5rem;
-  color: #6b7280;
+  color: #222;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -100,7 +91,7 @@ const NavItem = styled.div`
   a {
     display: block;
     padding: 0.5rem 0.75rem;
-    color: #111827;
+    color: #222;
     text-decoration: none;
 
     &:hover {
@@ -108,13 +99,6 @@ const NavItem = styled.div`
       @media (min-width: 768px) {
         background: transparent;
         color: #2563eb;
-      }
-    }
-
-    @media (prefers-color-scheme: dark) {
-      color: white;
-      &:hover {
-        background-color: #374151;
       }
     }
   }

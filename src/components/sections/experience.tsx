@@ -4,6 +4,7 @@ import { Timeline, TimelineItem } from "@/components/timeline";
 import { useContents } from "@/contexts/contents";
 import type { ExperienceContent, EducationContent } from "@/contexts/contents";
 import { motion } from "framer-motion";
+import { useVerticalFadeInMotion } from "@/hooks/motion";
 
 const StyledExperienceSection = styled.section`
   display: flex;
@@ -11,13 +12,11 @@ const StyledExperienceSection = styled.section`
   align-items: center;
   justify-content: flex-start;
   padding: 4rem 1rem;
-  min-height: 100vh;
 `;
 
 const SectionTitle = styled.h2`
   font-size: 2rem;
   font-weight: 700;
-  color: #111827;
   text-align: center;
 `;
 
@@ -33,7 +32,6 @@ const TimelineSide = styled.div`
 const TimelineDate = styled.div`
   position: absolute;
   width: 18%;
-  color: #6b7280;
   font-size: 14px;
   text-align: center;
   right: 893px;
@@ -95,7 +93,7 @@ const HorizontalDivider = styled.div`
   top: 30px;
   right: 745px;
   z-index: -1;
-  background-color: #6b7280;
+  background-color: #666;
   height: 3px;
   width: 100px;
   transform: scaleX(0);
@@ -109,24 +107,23 @@ const TimelineContent = styled.div<{ color: string }>`
   width: 100%;
   max-width: 800px;
   padding: 1.5rem 1rem; /* position horizontal lines horizontally */
-  border: 1px solid #6b7280;
+  border: 1px solid rgba(102, 102, 102, 0.3);
   border-radius: 0.5rem;
   background-color: ${({ color }) => color};
   text-align: left;
-  color: gray;
 
   @media (min-width: 1152px) {
     max-width: 720px; /* position horizontal lines vertically */
-    border: 1px solid #6b7280;
+    border: 1px solid rgba(102, 102, 102, 0.3);
   }
 
   &:hover {
-    box-shadow: 0 0 12px rgba(30, 125, 255, 0.6);
+    box-shadow: 0 0 12px rgba(37, 99, 235, 0.6);
   }
 
   &:hover ${IconImage} {
     transform: rotate(-225deg);
-    border: 2px solid #6b7280;
+    border: 2px solid #666;
     border-radius: 50%;
     border-bottom-color: #fff;
     border-right-color: #fff;
@@ -143,17 +140,18 @@ const TimelineContent = styled.div<{ color: string }>`
 
 const TimelineEmptyContent = styled.div`
   position: relative;
+  @media (min-width: 1152px) {
+    padding: 0.75rem 0; /* a small white-space between experience and quote */
 `;
 
 const Title = styled.div`
-  color: black;
   font-size: 1.25rem;
   font-weight: 600;
   padding-bottom: 0.25rem;
 `;
 
 const LocationDate = styled.div`
-  color: gray;
+  color: #666;
   margin-bottom: 1.5rem;
 
   @media (min-width: 1152px) {
@@ -176,18 +174,19 @@ const ExperienceDescription = styled.div`
 const EducationDescription = styled.div`
   text-align: left;
   font-size: 14px;
-  color: gray;
+  color: #666;
 `;
 
 const TechList = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
 `;
 
 const TechItem = styled.span`
-  background-color: #111827;
+  background-color: white;
   border-radius: 0.75rem;
+  border: 1px solid #666;
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   margin: 1.25rem 0.25rem 0.25rem 0.25rem;
@@ -196,10 +195,10 @@ const TechItem = styled.span`
 const TimelineSection = ({ date, isWorkExperience }: { date: string; isWorkExperience: boolean }) => {
   return (
     <TimelineSide className='TimelineSlide'>
-      <VerticalDivider color='#6b7280;' />
+      <VerticalDivider color='#666;' />
       <TimelineDate>{date}</TimelineDate>
       {isWorkExperience ? (
-        <BoldIconImage color='#6b7280' />
+        <BoldIconImage color='#666' />
       ) : (
         <>
           <IconImage />
@@ -262,6 +261,7 @@ const TimelineTermination = () => {
 const Experience = () => {
   const contents = useContents();
   const experience = contents.experience.experiences as (ExperienceContent | EducationContent)[];
+  const motionAnimation = useVerticalFadeInMotion();
   const MotionTimelineItem = motion(TimelineItem);
 
   return (
@@ -269,13 +269,7 @@ const Experience = () => {
       <SectionTitle>Experience</SectionTitle>
       <Timeline className='Timeline'>
         {[...experience, { isTermination: true }].map((item, index) => (
-          <MotionTimelineItem
-            key={index}
-            className='TimelineItem'
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ duration: 1, ease: [0.33, 1, 0.68, 1] }}>
+          <MotionTimelineItem key={index} className='TimelineItem' {...motionAnimation}>
             {"isTermination" in item ? (
               <TimelineTermination key={index} />
             ) : item.isWorkExperience ? (

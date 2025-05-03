@@ -10,13 +10,11 @@ const StyledProjectSection = styled.section`
   align-items: center;
   justify-content: flex-start;
   padding: 4rem 1rem;
-  min-height: 100vh;
 `;
 
 const SectionTitle = styled.h2`
   font-size: 2rem;
   font-weight: 700;
-  color: #111827;
   text-align: center;
 `;
 

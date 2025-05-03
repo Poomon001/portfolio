@@ -1,5 +1,5 @@
 /**
- * A card powered by Tailwind CSS Card - Flowbite
+ * A card powered by CSS Card - Flowbite
  **/
 import React from "react";
 import styled from "styled-components";
@@ -50,13 +50,11 @@ const Title = styled.h2`
 
 const Description = styled.p`
   font-size: 1.1rem;
-  color: #333;
   margin-bottom: 1.5rem;
 `;
 
 const SkillTag = styled.span`
   background: #f1f5f9;
-  color: #334155;
   font-size: 0.875rem;
   padding: 0.4rem 0.75rem;
   border-radius: 0.5rem;

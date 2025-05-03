@@ -6,7 +6,8 @@ import Hero from "@/components/sections/hero";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Experience from "@/components/sections/experience";
-import Projects from "@/components/sections/projects";
+import Testimonial from "@/components/sections/testimonial";
+import Projects from "@/components/sections/project";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
         <Navbar />
         <Hero />
         <Experience />
+        <Testimonial />
         <Projects />
         <Footer />
       </ContentsProvider>

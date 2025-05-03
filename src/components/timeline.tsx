@@ -5,7 +5,6 @@ const StyledTimeline = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   width: 100%;
   flex-direction: column;
 `;
