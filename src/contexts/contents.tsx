@@ -32,6 +32,7 @@ interface TestimonialContent {
 }
 
 interface ProjectContent {
+  id: string;
   title: string;
   description: string | React.ReactNode;
   skills: string[];
@@ -214,7 +215,7 @@ const testimonialContent: TestimonialContent[] = [
   {
     id: "04",
     testimonial:
-      "Poom created several automated functional tests... many of which required designing novel solutions and new page objects.",
+      "Poom performed excellent QA, ensuring the 5.15 release was high quality through meticulous testing... He created several automated tests, many required designing novel solutions.",
     source: "Final Evaluation",
     company: "VertiGIS",
     date: "Jan 2022",
@@ -223,6 +224,7 @@ const testimonialContent: TestimonialContent[] = [
 
 const projectContent: ProjectContent[] = [
   {
+    id: "01",
     title: "Nightrader, Stock Trading Platform",
     description:
       "Built a full-stack trading platform with a Go backend and React frontend for \
@@ -232,6 +234,7 @@ const projectContent: ProjectContent[] = [
     image: "/Nightrader.jpg",
   },
   {
+    id: "02",
     title: "BiasAnalyzer, Software for Detecting Bias in LLMs",
     description:
       "Won the JCURA award for developing software with Python to analyze 100,000+ words \

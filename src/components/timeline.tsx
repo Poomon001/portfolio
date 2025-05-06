@@ -11,7 +11,7 @@ const StyledTimeline = styled.div`
 
 const StyledTimelineItem = styled.div`
   display: flex;
-  margin: 0.25rem;
+  margin: 0.25rem 0rem;
   width: 100%;
   justify-content: center;
   align-items: center;
