@@ -10,15 +10,21 @@ import Autoplay from "embla-carousel-autoplay";
 import Quote from "@/components/quote";
 
 // Wrapper for the entire testimonial section
-const TestimonialSection = styled.div`
-  max-width: 1280px;
-  padding: 0rem 1rem 2rem 1rem;
-  margin: 0 auto;
-  text-align: left;
+const TestimonialSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem 0.75rem 2rem 1.25rem;
 
   @media (min-width: 1152px) {
     padding: 4rem 2rem;
   }
+`;
+
+const TestimonialContainer = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
 `;
 
 const TestimonialGrid = styled.div`
@@ -81,8 +87,10 @@ const Testimonial = () => {
 
   return (
     <TestimonialSection>
-      <TestimonialGridLayout testimonials={testimonials} />
-      <TestimonialCarousel testimonials={testimonials} />
+      <TestimonialContainer>
+        <TestimonialGridLayout testimonials={testimonials} />
+        <TestimonialCarousel testimonials={testimonials} />
+      </TestimonialContainer>
     </TestimonialSection>
   );
 };

@@ -9,9 +9,14 @@ import { useVerticalFadeInMotion } from "@/hooks/motion";
 const StyledExperienceSection = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 4rem 1rem;
+`;
+
+const ExperienceContainer = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
 `;
 
 const SectionTitle = styled.h2`
@@ -266,20 +271,22 @@ const Experience = () => {
 
   return (
     <StyledExperienceSection id='Experience'>
-      <SectionTitle>Experience</SectionTitle>
-      <Timeline className='Timeline'>
-        {[...experience, { isTermination: true }].map((item, index) => (
-          <MotionTimelineItem key={index} className='TimelineItem' {...motionAnimation}>
-            {"isTermination" in item ? (
-              <TimelineTermination key={index} />
-            ) : item.isWorkExperience ? (
-              <TimelineExperience key={index} {...(item as ExperienceContent)} />
-            ) : (
-              <TimelineEducation key={index} {...(item as EducationContent)} />
-            )}
-          </MotionTimelineItem>
-        ))}
-      </Timeline>
+      <ExperienceContainer>
+        <SectionTitle>Experience</SectionTitle>
+        <Timeline className='Timeline'>
+          {[...experience, { isTermination: true }].map((item, index) => (
+            <MotionTimelineItem key={index} className='TimelineItem' {...motionAnimation}>
+              {"isTermination" in item ? (
+                <TimelineTermination key={index} />
+              ) : item.isWorkExperience ? (
+                <TimelineExperience key={index} {...(item as ExperienceContent)} />
+              ) : (
+                <TimelineEducation key={index} {...(item as EducationContent)} />
+              )}
+            </MotionTimelineItem>
+          ))}
+        </Timeline>
+      </ExperienceContainer>
     </StyledExperienceSection>
   );
 };

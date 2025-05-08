@@ -4,3 +4,8 @@
 - Add className
 - Make hero padding responsive
 - Motion hamberger navbar 
+
+- About
+- navbar
+- award
+- logo and favicon
