@@ -1,7 +1,7 @@
 import type { TestimonialContent } from "@/contexts/contents";
 import styled from "styled-components";
 
-const TestimonialFigure = styled.figure`
+const QuoteItem = styled.div`
   max-width: 800px;
   margin: 0 auto;
   @media (min-width: 1152px) {
@@ -16,7 +16,7 @@ const QuoteIcon = styled.img`
   width: auto;
 `;
 
-const Blockquote = styled.blockquote`
+const BlockQuote = styled.blockquote`
   p {
     font-size: 1.25rem;
     font-weight: 500;
@@ -42,17 +42,17 @@ const CaptionText = styled.div`
 `;
 
 const Quote = ({ item }: { item: TestimonialContent }) => (
-  <TestimonialFigure>
+  <QuoteItem>
     <QuoteIcon src='./quote.svg' alt='quote icon' />
-    <Blockquote>
+    <BlockQuote>
       <p>{item.testimonial}</p>
       <CaptionText>
         <div>
           {item.source} &#8226; {item.company}
         </div>
       </CaptionText>
-    </Blockquote>
-  </TestimonialFigure>
+    </BlockQuote>
+  </QuoteItem>
 );
 
 export default Quote;

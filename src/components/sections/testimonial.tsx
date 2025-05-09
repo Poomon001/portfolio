@@ -4,7 +4,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useContents } from "@/contexts/contents";
-import type { TestimonialContent as TestimonialContentType } from "@/contexts/contents";
+import type { TestimonialContent } from "@/contexts/contents";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Quote from "@/components/quote";
@@ -53,7 +53,7 @@ const CarouselSlide = styled.div`
   padding: 1rem;
 `;
 
-const TestimonialCarousel = ({ testimonials }: { testimonials: TestimonialContentType[] }) => {
+const TestimonialCarousel = ({ testimonials }: { testimonials: TestimonialContent[] }) => {
   const autoplayOptions = {
     delay: 5000,
     stopOnInteraction: false,
@@ -73,7 +73,7 @@ const TestimonialCarousel = ({ testimonials }: { testimonials: TestimonialConten
   );
 };
 
-const TestimonialGridLayout = ({ testimonials }: { testimonials: TestimonialContentType[] }) => (
+const TestimonialGridLayout = ({ testimonials }: { testimonials: TestimonialContent[] }) => (
   <TestimonialGrid>
     {testimonials.slice(0, 3).map((item) => (
       <Quote key={item.id} item={item} />
@@ -83,7 +83,7 @@ const TestimonialGridLayout = ({ testimonials }: { testimonials: TestimonialCont
 
 const Testimonial = () => {
   const contents = useContents();
-  const testimonials = contents.testimonial as TestimonialContentType[];
+  const testimonials = contents.testimonial as TestimonialContent[];
 
   return (
     <TestimonialSection>

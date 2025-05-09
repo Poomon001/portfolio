@@ -8,6 +8,7 @@ import Footer from "@/components/footer";
 import Experience from "@/components/sections/experience";
 import Testimonial from "@/components/sections/testimonial";
 import Projects from "@/components/sections/project";
+import Award from "@/components/sections/award";
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
         <Experience />
         <Testimonial />
         <Projects />
+        <Award />
         <Footer />
       </ContentsProvider>
     </div>

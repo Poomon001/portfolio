@@ -39,6 +39,15 @@ interface ProjectContent {
   image: string;
 }
 
+interface AwardContent {
+  id: string;
+  icon: string;
+  isSquare: boolean;
+  title: string;
+  year: string;
+  brief: string;
+}
+
 const heroContent: HeroContent = {
   heading: "Hi, I'm Poom",
   brief: (
@@ -246,6 +255,73 @@ const projectContent: ProjectContent[] = [
   },
 ];
 
+const awardContent: AwardContent[] = [
+  {
+    id: "01",
+    icon: "/springer.svg",
+    isSquare: false,
+    title: "International Publication",
+    year: "2025",
+    brief: "Research Publication on LLM Biases in Springer",
+  },
+  {
+    id: "02",
+    icon: "/UVic_academia.svg",
+    isSquare: false,
+    title: "JCURA Award",
+    year: "2025",
+    brief: "Undergraduate Research Award in Machine Learning",
+  },
+  {
+    id: "03",
+    icon: "/UVEC.svg",
+    isSquare: true,
+    title: "1st Place",
+    year: "2023",
+    brief: "UVic Engineering Programming Competition",
+  },
+  {
+    id: "04",
+    icon: "/mlh.svg",
+    isSquare: false,
+    title: "Best Domain Award",
+    year: "2022",
+    brief: "UBC nwHack Award by Major League Hacking",
+  },
+  {
+    id: "05",
+    icon: "/visier.svg",
+    isSquare: true,
+    title: "Honorable Mentions",
+    year: "2022",
+    brief: "Visier Product Dev Day Hackathon Recognition",
+  },
+  {
+    id: "06",
+    icon: "/UVEC.svg",
+    isSquare: true,
+    title: "1st Place",
+    year: "2021",
+    brief: "UVic Engineering Programming Competition",
+  },
+  {
+    id: "07",
+    icon: "/UVic_club.svg",
+    isSquare: false,
+    title: "1st Place",
+    year: "2019",
+    brief: "UVic Web Design and Development Spookathon",
+  },
+  {
+    id: "08",
+    icon: "/UVic_academia.svg",
+    isSquare: false,
+    title: "Excellence in Math Award",
+    year: "2019",
+    brief: "Outstanding Performance on The Fermat Math Contest",
+  },
+];
+
 const contents = {
   hero: heroContent,
   experience: {
@@ -256,6 +332,10 @@ const contents = {
   project: {
     heading: "Project",
     projects: projectContent,
+  },
+  award: {
+    heading: "Awards",
+    awards: awardContent,
   },
 };
 
@@ -272,4 +352,12 @@ type ContentsProviderProps = React.PropsWithChildren<{ contents: Contents }>;
 
 export default contents;
 export { ContentsProvider, useContents };
-export type { Contents, HeroContent, ExperienceContent, EducationContent, TestimonialContent, ProjectContent };
+export type {
+  Contents,
+  HeroContent,
+  ExperienceContent,
+  EducationContent,
+  TestimonialContent,
+  ProjectContent,
+  AwardContent,
+};
