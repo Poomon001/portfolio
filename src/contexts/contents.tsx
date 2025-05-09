@@ -224,7 +224,7 @@ const testimonialContent: TestimonialContent[] = [
   {
     id: "04",
     testimonial:
-      "Poom performed excellent QA, ensuring the 5.15 release was high quality through meticulous testing... He created several automated tests, many required designing novel solutions.",
+      "Poom performed excellent QA, ensuring high quality for the 5.15 release through meticulous testing... He created several automated tests, many required novel solution designs.",
     source: "Final Evaluation",
     company: "VertiGIS",
     date: "Jan 2022",

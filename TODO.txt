@@ -1,11 +1,12 @@
 - Minimize CSS and make sure that it maintains funtionality and responsiveness
-- Make config for CSS
-- Make animation for scrolling
+- Make config for CSS settings and mixin in styles folder
 - Add className
 - Make hero padding responsive
-- Motion hamberger navbar 
+- Make ICon compoennt
+- Make auto scroll hook animation
+- Make linkedin and GitHub look better
+- use edge console to optimize SEO
 
 - About
-- navbar
 - logo and favicon
 - bold number in descriptions and edit content

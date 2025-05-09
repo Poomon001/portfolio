@@ -10,12 +10,12 @@ const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
+  -webkit-tap-highlight-color: transparent; /* remove touch highlight */
 `;
 
 const NavContainer = styled.div`
-  padding: 1rem 1rem;
+  padding: 1rem;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 `;
@@ -25,6 +25,7 @@ const Brand = styled.a`
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
+  z-index: 10;
 
   img {
     height: 2rem;
@@ -47,6 +48,7 @@ const ToggleButton = styled.button`
 
   &:hover {
     background-color: #f3f4f6;
+    border-radius: 0.25rem;
   }
 
   @media (min-width: 768px) {
@@ -60,14 +62,22 @@ const ToggleButton = styled.button`
 `;
 
 const NavMenu = styled.div<{ open: boolean }>`
-  display: ${({ open }) => (open ? "block" : "none")};
-  width: 100%;
-  margin-top: 1rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  overflow: hidden;
+  max-height: ${({ open }) => (open ? "500px" : "0px")};
+  transition: max-height 0.5s ease;
+  border-bottom: 1px solid #e5e7eb;
 
   @media (min-width: 768px) {
+    position: relative;
+    max-height: none;
+    overflow: visible;
     display: flex;
-    width: auto;
-    margin-top: 0;
+    border-bottom: none;
   }
 `;
 
@@ -76,11 +86,11 @@ const NavList = styled.div`
   flex-direction: column;
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: #f9fafb;
+  background-color: white;
 
   @media (min-width: 768px) {
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
     padding: 0;
     background: transparent;
     border: none;
@@ -121,8 +131,11 @@ const Navbar = () => {
           </svg>
         </ToggleButton>
 
-        <NavMenu open={menuOpen}>
-          <NavList>
+        <NavMenu className='NavMenu' open={menuOpen}>
+          <NavList className='NavList'>
+            <NavItem>
+              <a href='#Experience'>About</a>
+            </NavItem>
             <NavItem>
               <a href='#Experience'>Experience</a>
             </NavItem>

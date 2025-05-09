@@ -24,7 +24,7 @@ const CardLink = styled.a`
   transition: all 0.3s ease;
   text-decoration: none;
 
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent; /* remove touch highlight */
 
   &:hover {
     transform: translateY(-4px) scale(1.01);

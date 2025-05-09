@@ -267,7 +267,7 @@ const Experience = () => {
   const contents = useContents();
   const experience = contents.experience.experiences as (ExperienceContent | EducationContent)[];
   const motionAnimation = useVerticalFadeInMotion();
-  const MotionTimelineItem = motion(TimelineItem);
+  const MotionTimelineItem = motion.create(TimelineItem);
 
   return (
     <StyledExperienceSection id='Experience'>
