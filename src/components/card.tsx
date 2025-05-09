@@ -41,7 +41,6 @@ const CardLink = styled.a`
 const CardImage = styled.div`
   flex: 1 1 50%;
   display: flex;
-  // align-items: center;
 `;
 
 const Image = styled.img`
@@ -88,7 +87,7 @@ const SkillsContainer = styled.div`
 
 const Card = ({ title, description, image, skills }: ProjectContent) => (
   <CardContainer>
-    <CardLink href='https://github.com/Poomon001'>
+    <CardLink href='https://github.com/Poomon001' target='_blank' rel='noopener noreferrer'>
       <CardImage>
         <Image src={image}></Image>
       </CardImage>
