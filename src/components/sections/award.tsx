@@ -8,7 +8,7 @@ const StyledAwardSection = styled.section`
   display: flex;
   flex-direction: column;
   padding: 4rem 1rem;
-  min-height: 700px;
+  min-height: calc(100vh - 383px); /* Subtract footer height */
   justify-content: flex-start;
 `;
 
