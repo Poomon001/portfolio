@@ -12,9 +12,20 @@ const fontSans = FontSans({
 
 export const metadata = {
   title: "P. Chuthamsatid - Software Developer",
-  description: "This is the layout for the portfolio",
+  titleTemplate: "poomrapee.com",
+  description: "Poomrapee's portfolio showcasing software development expertise",
   icons: {
-    icon: "/initials.svg",
+    icon: "initials-96x96.svg",
+  },
+  openGraph: {
+    title: "poomrapee.com",
+    siteName: "poomrapee.com",
+    description: "Poomrapee's portfolio showcasing software development expertise",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -22,7 +33,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <Head>
-        <link rel='icon' type='image/png' sizes='32x32' href='/favicon.png' />
+        <link rel='icon' type='image/svg+xml' href='/initials-96x96.svg' /> {/* Google SEO */}
+        <link rel='icon' type='image/png' href='/initials-96x96.png' sizes='96x96' /> {/* Google SEO */}
+        <link rel='shortcut icon' href='/initials-96x96.png' /> {/* Google SEO */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Poomrapee Chuthamsatid",
+              url: "https://www.poomrapee.com",
+              jobTitle: "Software Developer",
+              description: "Poomrapee's portfolio showcasing software development expertise",
+              sameAs: ["https://www.linkedin.com/in/poomrapee-chuthamsatid-04b31119a", "https://github.com/Poomon001"],
+            }),
+          }}
+        />
       </Head>
       <body className={fontSans.variable}>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
