@@ -58,7 +58,7 @@ const Footer = () => {
         <br />
         <FooterText>
           <FooterLink href='https://github.com/Poomon001/portfolio' target='_blank' rel='noopener noreferrer'>
-            Created by Poom Chuthamsatid powered by Next.js and TypeScript
+            Created by Poom (Phillip) Chuthamsatid powered by Next.js and TypeScript
           </FooterLink>
         </FooterText>
       </FooterContent>

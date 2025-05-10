@@ -45,13 +45,12 @@ const AwardTitle = styled.div`
 `;
 
 const AwardBrief = styled.div`
-  color: #222;
+  color: #666;
   font-weight: 500;
   margin-top: 0.5rem;
 
   @media (min-width: 720px) {
     font-weight: 500;
-    color: #666;
   }
 `;
 
