@@ -118,7 +118,7 @@ const TimelineContent = styled.div<{ color: string }>`
   text-align: left;
 
   @media (min-width: 1152px) {
-    max-width: 720px; /* position horizontal lines vertically */
+    max-width: 725px; /* position horizontal lines vertically */
     border: 1px solid rgba(102, 102, 102, 0.3);
   }
 

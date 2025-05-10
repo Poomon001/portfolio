@@ -121,7 +121,7 @@ const Navbar = () => {
     <Nav>
       <NavContainer>
         <Brand href='#'>
-          <img src='https://flowbite.com/docs/images/logo.svg' alt='Logo' />
+          <img src='/favicon_large.svg' alt='Logo' />
           <span>PC</span>
         </Brand>
 
