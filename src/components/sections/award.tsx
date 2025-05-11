@@ -8,7 +8,7 @@ const StyledAwardSection = styled.section`
   display: flex;
   flex-direction: column;
   padding: 4rem 1rem;
-  min-height: calc(100vh - 383px); /* Subtract footer height */
+  min-height: calc(100vh - 5.5rem); /* Subtract footer height */
   justify-content: flex-start;
 `;
 
@@ -23,8 +23,8 @@ const AwardContainer = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 400;
   text-align: center;
 `;
 

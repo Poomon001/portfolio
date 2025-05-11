@@ -21,7 +21,7 @@ const StyledHeroSection = styled.section`
 const HeroTitle = styled.h1`
   color: white;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   font-family: var(--font-sans);
   text-align: left;
   margin: 25px 0px;
@@ -49,12 +49,13 @@ const HeroSubtitle = styled.p`
 
 const Hero = () => {
   const contents = useContents();
+  const brief = contents.hero.brief;
 
   return (
     <Background>
       <StyledHeroSection>
         <HeroTitle>{contents.hero.heading}</HeroTitle>
-        <HeroSubtitle>{contents.hero.brief}</HeroSubtitle>
+        <HeroSubtitle>{brief}</HeroSubtitle>
       </StyledHeroSection>
     </Background>
   );

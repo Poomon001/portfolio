@@ -26,6 +26,7 @@ const Brand = styled.a`
   gap: 0.75rem;
   text-decoration: none;
   z-index: 10;
+  padding-left: 0.75rem;
 
   img {
     height: 2rem;
@@ -134,7 +135,7 @@ const Navbar = () => {
         <NavMenu className='NavMenu' open={menuOpen}>
           <NavList className='NavList'>
             <NavItem>
-              <a href='#Experience'>About</a>
+              <a href='#About'>About</a>
             </NavItem>
             <NavItem>
               <a href='#Experience'>Experience</a>

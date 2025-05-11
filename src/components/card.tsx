@@ -59,8 +59,8 @@ const CardBody = styled.div`
 `;
 
 const CardTitle = styled.div`
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 400;
   padding-bottom: 0.25rem;
 `;
 
