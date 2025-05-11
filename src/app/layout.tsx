@@ -15,7 +15,7 @@ export const metadata = {
   titleTemplate: "poomrapee.com",
   description: "Poomrapee's portfolio showcasing software development expertise",
   icons: {
-    icon: "/initials-96x96.png",
+    icon: "/initials-48x48.ico",
   },
   openGraph: {
     title: "poomrapee.com",
@@ -33,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <Head>
+        <link rel='icon' href='/initials-48x48.ico' /> {/* SEO */}
         <link rel='icon' type='image/png' href='/initials-96x96.png' sizes='96x96' /> {/* SEO */}
         <link rel='shortcut icon' href='/initials-96x96.png' /> {/* SEO */}
         <script

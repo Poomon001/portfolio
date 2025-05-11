@@ -7,7 +7,6 @@ const FooterContainer = styled.footer`
   margin: 1rem;
   padding: 0.5rem;
   transition: background-color 0.3s ease;
-  height: 4rem;
 `;
 
 const FooterContent = styled.div`
@@ -18,6 +17,7 @@ const FooterContent = styled.div`
   align-items: center;
   flex-direction: column;
   font-size: 0.875rem;
+  height: 4rem;
 `;
 
 const FooterText = styled.span`
