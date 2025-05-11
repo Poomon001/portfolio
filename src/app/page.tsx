@@ -10,20 +10,22 @@ import Experience from "@/components/sections/experience";
 import Testimonial from "@/components/sections/testimonial";
 import Projects from "@/components/sections/project";
 import Award from "@/components/sections/award";
+import FloatingSocialBar from "@/components/floatingSocialBar";
 
 export default function HomePage() {
   return (
     <div>
+      <Navbar />
       <ContentsProvider contents={contents}>
-        <Navbar />
         <Hero />
         <About />
         <Experience />
         <Testimonial />
         <Projects />
         <Award />
-        <Footer />
       </ContentsProvider>
+      <Footer />
+      <FloatingSocialBar />
     </div>
   );
 }
