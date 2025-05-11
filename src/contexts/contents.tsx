@@ -59,6 +59,11 @@ const heroContent: HeroContent = {
   ),
 };
 
+const about: string =
+  "I am a full stack developer with working experience in the software tech industry. \
+  Currently, I am pursuing a bachelor's degree in software engineering at the University of Victoria. \
+  I love solving competition programming problems, participating in Hackathon events, and playing ping pong in my spare time.";
+
 const experienceContent: (ExperienceContent | EducationContent)[] = [
   {
     id: "01012025",
@@ -244,7 +249,7 @@ const projectContent: ProjectContent[] = [
   },
   {
     id: "02",
-    title: "BiasAnalyzer, Software for Detecting Bias in LLMs",
+    title: "BiasAnalyzer, Bias Detection in LLMs",
     description:
       "Won the JCURA award for developing software with Python to analyze 100,000+ words \
         for gender and race bias detection, quantifying and visualizing the real-world impacts of societal \
@@ -324,6 +329,10 @@ const awardContent: AwardContent[] = [
 
 const contents = {
   hero: heroContent,
+  about: {
+    heading: "About",
+    description: about,
+  },
   experience: {
     heading: "Experience",
     experiences: experienceContent,

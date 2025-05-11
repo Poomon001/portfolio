@@ -24,8 +24,8 @@ const ProjectContainer = styled.div`
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 400;
   text-align: center;
 `;
 

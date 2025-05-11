@@ -20,8 +20,8 @@ const ExperienceContainer = styled.div`
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 400;
   text-align: center;
 `;
 
@@ -150,8 +150,8 @@ const TimelineEmptyContent = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 400;
   padding-bottom: 0.25rem;
 `;
 
@@ -272,7 +272,7 @@ const Experience = () => {
   return (
     <StyledExperienceSection id='Experience'>
       <ExperienceContainer>
-        <SectionTitle>Experience</SectionTitle>
+        <SectionTitle>{contents.experience.heading}</SectionTitle>
         <Timeline className='Timeline'>
           {[...experience, { isTermination: true }].map((item, index) => (
             <MotionTimelineItem key={index} className='TimelineItem' {...motionAnimation}>
