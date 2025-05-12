@@ -245,7 +245,7 @@ const projectContent: ProjectContent[] = [
         FIFO matching, order executions, and wallet transactions, scaling it via Microservices, Docker, \
         Concurrency, and RabbitMQ to support 5,000+ concurrent users and 100,000+ transactions.",
     skills: ["Golang", "JavaScript", "React", "Docker", "PostgreSQL", "API"],
-    image: "/Nightrader.jpg",
+    image: "/project/Nightrader.jpg",
   },
   {
     id: "02",
@@ -256,14 +256,14 @@ const projectContent: ProjectContent[] = [
         biases using Pandas, NumPy, Matplotlib, and word embeddings from Microsoft, OpenAI, Google, Cohere, \
         and BGE models, with findings published by Springer Media.",
     skills: ["Python", "Pandas", "NumPy", "Matplotlib", "API"],
-    image: "/BiasAnalyzer.jpg",
+    image: "/project/BiasAnalyzer.jpg",
   },
 ];
 
 const awardContent: AwardContent[] = [
   {
     id: "01",
-    icon: "/springer.svg",
+    icon: "/award/springer.svg",
     isSquare: false,
     title: "International Publication",
     year: "2025",
@@ -271,7 +271,7 @@ const awardContent: AwardContent[] = [
   },
   {
     id: "02",
-    icon: "/UVic_academia.svg",
+    icon: "/award/UVic_academia.svg",
     isSquare: false,
     title: "JCURA Award",
     year: "2025",
@@ -279,7 +279,7 @@ const awardContent: AwardContent[] = [
   },
   {
     id: "03",
-    icon: "/UVEC.svg",
+    icon: "/award/UVEC.svg",
     isSquare: true,
     title: "1st Place",
     year: "2023",
@@ -287,7 +287,7 @@ const awardContent: AwardContent[] = [
   },
   {
     id: "04",
-    icon: "/mlh.svg",
+    icon: "/award/mlh.svg",
     isSquare: false,
     title: "Best Domain Award",
     year: "2022",
@@ -295,7 +295,7 @@ const awardContent: AwardContent[] = [
   },
   {
     id: "05",
-    icon: "/visier.svg",
+    icon: "/award/visier.svg",
     isSquare: true,
     title: "Honorable Mentions",
     year: "2022",
@@ -303,7 +303,7 @@ const awardContent: AwardContent[] = [
   },
   {
     id: "06",
-    icon: "/UVEC.svg",
+    icon: "/award/UVEC.svg",
     isSquare: true,
     title: "1st Place",
     year: "2021",
@@ -311,7 +311,7 @@ const awardContent: AwardContent[] = [
   },
   {
     id: "07",
-    icon: "/UVic_club.svg",
+    icon: "/award/UVic_club.svg",
     isSquare: false,
     title: "1st Place",
     year: "2019",
@@ -319,7 +319,7 @@ const awardContent: AwardContent[] = [
   },
   {
     id: "08",
-    icon: "/UVic_academia.svg",
+    icon: "/award/UVic_academia.svg",
     isSquare: false,
     title: "Excellence in Math Award",
     year: "2019",
