@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { GitHub as GitHubIcon, LinkedIn as LinkedInIcon, Email as EmailIcon } from "@mui/icons-material";
 import SocialLink from "@/components/socialLink";
+import { profile, footer } from "@/lib/config";
 
 const FooterContainer = styled.footer`
   background-color: #fff;
@@ -52,18 +53,14 @@ const Footer = () => {
     <FooterContainer>
       <FooterContent>
         <SocialRow>
-          <SocialLink href='https://github.com/Poomon001' icon={<GitHubIcon />} label='GitHub' />
-          <SocialLink
-            href='https://www.linkedin.com/in/poomrapee-chuthamsatid-04b31119a/'
-            icon={<LinkedInIcon />}
-            label='LinkedIn'
-          />
-          <SocialLink href='mailto:poomon2542@gmail.com' icon={<EmailIcon />} label='Email' />
+          <SocialLink href={profile.github} icon={<GitHubIcon />} label='GitHub' />
+          <SocialLink href={profile.linkedin} icon={<LinkedInIcon />} label='LinkedIn' />
+          <SocialLink href={`mailto:${profile.email}`} icon={<EmailIcon />} label='Email' />
         </SocialRow>
 
         <FooterText>
-          <FooterLink href='https://github.com/Poomon001/portfolio' target='_blank' rel='noopener noreferrer'>
-            Created by Poom (Pete) Chuthamsatid powered by Next.js and TypeScript
+          <FooterLink href={footer.portfolio} target='_blank' rel='noopener noreferrer'>
+            {footer.credit}
           </FooterLink>
         </FooterText>
       </FooterContent>

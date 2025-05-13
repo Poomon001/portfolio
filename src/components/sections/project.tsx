@@ -53,8 +53,9 @@ const Projects = () => {
                 id={project.id}
                 title={project.title}
                 description={project.description}
-                image={project.image}
+                url={project.url}
                 skills={project.skills}
+                image={project.image}
               />
             </motion.div>
           ))}

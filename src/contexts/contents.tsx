@@ -1,8 +1,10 @@
 import React from "react";
+import { profile, project } from "@/lib/config";
 
 interface HeroContent {
   heading: string;
-  brief: React.ReactNode;
+  hook: string;
+  brief: string;
 }
 
 interface ExperienceContent {
@@ -35,6 +37,7 @@ interface ProjectContent {
   id: string;
   title: string;
   description: string | React.ReactNode;
+  url: string;
   skills: string[];
   image: string;
 }
@@ -49,14 +52,10 @@ interface AwardContent {
 }
 
 const heroContent: HeroContent = {
-  heading: "Hi, I'm Poom",
-  brief: (
-    <>
-      I'm a fifth-year software engineering student with 2 years of industry experience
-      <br />
-      Specializing in data-intensive and scalable systems.
-    </>
-  ),
+  heading: `Hi, I'm ${profile.first}`,
+  hook: "Building robust systems that bridges software logic and business needs.",
+  brief:
+    "Poom is a software developer delivering data-intensive, end-to-end solutions for e-commerce tech, AI-driven platforms, and data pipelines—turning complex data into business action.",
 };
 
 const about: string =
@@ -244,6 +243,7 @@ const projectContent: ProjectContent[] = [
       "Built a full-stack trading platform with a Go backend and React frontend for \
         FIFO matching, order executions, and wallet transactions, scaling it via Microservices, Docker, \
         Concurrency, and RabbitMQ to support 5,000+ concurrent users and 100,000+ transactions.",
+    url: project.nightrader,
     skills: ["Golang", "JavaScript", "React", "Docker", "PostgreSQL", "API"],
     image: "/project/Nightrader.jpg",
   },
@@ -255,6 +255,7 @@ const projectContent: ProjectContent[] = [
         for gender and race bias detection, quantifying and visualizing the real-world impacts of societal \
         biases using Pandas, NumPy, Matplotlib, and word embeddings from Microsoft, OpenAI, Google, Cohere, \
         and BGE models, with findings published by Springer Media.",
+    url: project.biasanalyzer,
     skills: ["Python", "Pandas", "NumPy", "Matplotlib", "API"],
     image: "/project/BiasAnalyzer.jpg",
   },

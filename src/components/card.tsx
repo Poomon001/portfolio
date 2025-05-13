@@ -85,9 +85,9 @@ const SkillsContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-const Card = ({ title, description, image, skills }: ProjectContent) => (
+const Card = ({ title, description, url, skills, image }: ProjectContent) => (
   <CardContainer>
-    <CardLink href='https://github.com/Poomon001' target='_blank' rel='noopener noreferrer'>
+    <CardLink href={url} target='_blank' rel='noopener noreferrer'>
       <CardImage>
         <Image src={image}></Image>
       </CardImage>

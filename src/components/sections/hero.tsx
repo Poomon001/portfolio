@@ -35,27 +35,35 @@ const HeroTitle = styled.h1`
   }
 `;
 
-const HeroSubtitle = styled.p`
-  color: white;
+const HeroSubtitle = styled.div`
+  color: #aaa;
   font-size: 0.75rem;
   font-weight: normal;
   font-family: var(--font-sans);
   max-width: 750px;
 
   @media (min-width: 768px) {
-    font-size: 1rem;
+    font-size: 1.75rem;
   }
+`;
+
+const Hook = styled.span`
+  color: white;
 `;
 
 const Hero = () => {
   const contents = useContents();
+  const hook = contents.hero.hook;
   const brief = contents.hero.brief;
 
   return (
     <Background>
       <StyledHeroSection>
         <HeroTitle>{contents.hero.heading}</HeroTitle>
-        <HeroSubtitle>{brief}</HeroSubtitle>
+        <HeroSubtitle>
+          <Hook>{hook}</Hook>&nbsp;
+          {brief}
+        </HeroSubtitle>
       </StyledHeroSection>
     </Background>
   );
