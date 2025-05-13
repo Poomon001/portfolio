@@ -55,7 +55,7 @@ const heroContent: HeroContent = {
   heading: `Hi, I'm ${profile.first}`,
   hook: "Building robust systems that bridges software logic and business needs.",
   brief:
-    "Poom is a software developer delivering data-intensive, end-to-end solutions for e-commerce tech, AI-driven platforms, and data pipelines—turning complex data into business action.",
+    "I am a software engineer delivering data-intensive, end-to-end solutions for e-commerce tech, AI-driven platforms, and data pipelines.",
 };
 
 const about: string =

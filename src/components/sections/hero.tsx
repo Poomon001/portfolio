@@ -11,7 +11,11 @@ const StyledHeroSection = styled.section`
   justify-content: center;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 0 4rem;
+  padding: 0 2rem;
+
+  @media (min-width: 358px) {
+    padding: 0 4rem;
+  }
 
   @media (min-width: 1800px) {
     max-width: 1480px;
@@ -20,30 +24,30 @@ const StyledHeroSection = styled.section`
 
 const HeroTitle = styled.h1`
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 500;
   font-family: var(--font-sans);
   text-align: left;
   margin: 25px 0px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 358px) {
     font-size: 2.5rem;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     font-size: 4rem;
   }
 `;
 
 const HeroSubtitle = styled.div`
-  color: #aaa;
-  font-size: 0.75rem;
+  color: #aaa; /* #9ecbf5 */
+  font-size: 1.25rem;
   font-weight: normal;
   font-family: var(--font-sans);
-  max-width: 750px;
+  max-width: 784px;
 
   @media (min-width: 768px) {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 `;
 
