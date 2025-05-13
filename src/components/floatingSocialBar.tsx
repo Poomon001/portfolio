@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { GitHub as GitHubIcon, LinkedIn as LinkedInIcon, Email as EmailIcon } from "@mui/icons-material";
+import { profile } from "@/lib/config";
 import SocialLink from "@/components/socialLink";
 
 const FloatingBar = styled.div`
@@ -27,13 +28,9 @@ const VerticalLine = styled.div<{ color: string }>`
 const FloatingSocialBar = () => {
   return (
     <FloatingBar>
-      <SocialLink href='https://github.com/Poomon001' icon={<GitHubIcon fontSize='large' />} label='GitHub' />
-      <SocialLink
-        href='https://www.linkedin.com/in/poomrapee-chuthamsatid-04b31119a/'
-        icon={<LinkedInIcon fontSize='large' />}
-        label='LinkedIn'
-      />
-      <SocialLink href='mailto:poomon2542@gmail.com' icon={<EmailIcon fontSize='large' />} label='Email' />
+      <SocialLink href={profile.github} icon={<GitHubIcon fontSize='large' />} label='GitHub' />
+      <SocialLink href={profile.linkedin} icon={<LinkedInIcon fontSize='large' />} label='LinkedIn' />
+      <SocialLink href={`mailto:${profile.email}`} icon={<EmailIcon fontSize='large' />} label='Email' />
       <VerticalLine color='#222' />
     </FloatingBar>
   );

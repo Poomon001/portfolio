@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Roboto as FontSans } from "next/font/google";
+import { profile, site } from "@/lib/config";
 import StyledComponentsRegistry from "@/lib/registry";
 import "@/styles/globals.css";
 
@@ -11,16 +12,16 @@ const fontSans = FontSans({
 });
 
 export const metadata = {
-  title: "P. Chuthamsatid - Software Developer",
-  titleTemplate: "poomrapee.com",
-  description: "Poomrapee's portfolio showcasing software development expertise",
+  title: site.title,
+  titleTemplate: site.titleTemplate,
+  description: site.description,
   icons: {
     icon: "/initials-48x48.ico",
   },
   openGraph: {
-    title: "poomrapee.com",
-    siteName: "poomrapee.com",
-    description: "Poomrapee's portfolio showcasing software development expertise",
+    title: site.titleTemplate,
+    siteName: site.titleTemplate,
+    description: site.description,
     type: "website",
   },
   robots: {
@@ -33,20 +34,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <Head>
-        <link rel='icon' href='/initials-48x48.ico' /> {/* SEO */}
+        <link rel='icon' type='image/x-icon' href='/initials-48x48.ico' /> {/* SEO */}
         <link rel='icon' type='image/png' href='/initials-96x96.png' sizes='96x96' /> {/* SEO */}
-        <link rel='shortcut icon' href='/initials-96x96.png' /> {/* SEO */}
+        <link rel='shortcut icon' type='image/png' href='/initials-96x96.png' /> {/* SEO */}
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              name: "Poomrapee Chuthamsatid",
-              url: "https://www.poomrapee.com",
+              name: `${profile.full} ${profile.last}`,
+              url: site.url,
               jobTitle: "Software Developer",
-              description: "Poomrapee's portfolio showcasing software development expertise",
-              sameAs: ["https://www.linkedin.com/in/poomrapee-chuthamsatid-04b31119a", "https://github.com/Poomon001"],
+              description: site.description,
+              sameAs: [profile.linkedin, profile.github],
             }),
           }}
         />
