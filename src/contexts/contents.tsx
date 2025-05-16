@@ -13,6 +13,7 @@ interface ExperienceContent {
   position: string;
   location: string;
   date: string;
+  brief: React.ReactNode;
   achievements: string[] | React.ReactNode[];
   isWorkExperience: boolean;
   skills: string[];
@@ -20,7 +21,7 @@ interface ExperienceContent {
 
 interface EducationContent {
   id: string;
-  description: string;
+  description: string | React.ReactNode;
   date: string;
   isWorkExperience: boolean;
 }
@@ -53,15 +54,29 @@ interface AwardContent {
 
 const heroContent: HeroContent = {
   heading: `Hi, I'm ${profile.first}`,
-  hook: "Building robust systems that bridges software logic and business needs.",
+  hook: "Building robust systems that bridges software logic with business needs.",
   brief:
     "I am a software engineer delivering data-intensive, end-to-end solutions for e-commerce tech, AI-driven platforms, and data pipelines.",
 };
 
-const about: string =
-  "I am a full stack developer with working experience in the software tech industry. \
-  Currently, I am pursuing a bachelor's degree in software engineering at the University of Victoria. \
-  I love solving competition programming problems, participating in Hackathon events, and playing ping pong in my spare time.";
+const aboutMe = (
+  <>
+    <p>
+      I built full-stack, data-intensive systems that transform complex data into business impact. My engineering
+      background drives me to break down problems, evaluate trade-offs, and build robust systems — whether in production
+      or at hackathons, where I push my limits and collaborate with other fellows.
+    </p>
+
+    <p>
+      I chose software engineering because I love bridging innovation with tangible outcomes. I enjoy the moment when
+      abstract ideas transform into real-world solutions. That’s why I served as a teaching assistant for Algorithms and
+      Data Structures II, simplifying complex technical concepts to help others translate abstract ideas to practical
+      applications.
+    </p>
+
+    <p>Outside of coding, you’ll find me playing ping pong or exploring new restaurants across different cities.</p>
+  </>
+);
 
 const experienceContent: (ExperienceContent | EducationContent)[] = [
   {
@@ -70,19 +85,33 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
     position: "AI Software Developer Intern",
     location: "Victoria BC, Canada",
     date: "Jan 2025 - Apr 2025",
+    brief: (
+      <p>
+        <strong>
+          Kinsol needs to transform its proof-of-concept marine diversity classification pipeline into a
+          production-ready system for the first customer demo.
+        </strong>
+        &nbsp;I engineered the processing pipeline to ingest raw videos, perform object tracking, and automatically
+        extract highlight moments, enabling a successful live demonstration of the product.
+      </p>
+    ),
     achievements: [
       <p>
-        Driving development of AI-powered classification pipeline using Python, Docker, Parallelization, Google Cloud,
-        and YOLOv8 for marine diversity analysis, securing $30,000 in initial funding to build vision-based tracking
-        software.
+        Developed the vision-based pipeline using Python, Parallelization, and Google Cloud securing{" "}
+        <strong>$30,000</strong> in initial funding.
       </p>,
       <p>
-        Optimized tracking annotation runtime by 72% per server for 30K+ videos using parallelism, GPUs, and distributed
-        computing.
+        Optimized annotation runtime by <strong>72%</strong> across <strong>30,000+</strong> videos using GPU, data
+        filters, and distributed computing.
+      </p>,
+      <p>Dockerized microservices to stabilize pipeline processing across different machines.</p>,
+      <p>
+        Delivered recurring video analysis using NumPy, Matplotlib, and Pandas to validate AI vision models and improve
+        training outcomes.
       </p>,
     ],
     isWorkExperience: true,
-    skills: ["Python", "Docker", "SQL"],
+    skills: [],
   },
   {
     id: "01092024",
@@ -90,23 +119,38 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
     position: "Software Developer Intern",
     location: "Vancouver BC, Canada",
     date: "Sep 2024 - Dec 2024",
+    brief: (
+      <p>
+        <strong>
+          Arista seeks to streamline ISO-based configuration workflows and automated first-boot VM setup to reduce
+          operational overhead and deliver a smoother customer experience.
+        </strong>
+        &nbsp;I built a workflow for ISO configuration validation, a declarative preview system for ISO metadata and
+        contents, and a prototype for declarative ISO generation, improving user interaction efficiency.
+      </p>
+    ),
     achievements: [
       <p>
-        Streamlined automated first-boot setup using Kotlin, Python, Mockito, Pytest, Docker, improving VM provisioning
-        process for Arista's global customer base of 10,000+ with a declarative preview and ISO generation system.
+        Developed workflows for declarative ISO configuration previews and automated ISO generation using Kotlin,
+        Python, and Docker to support first-boot VM.
       </p>,
+      <p>Enforced Arista network security standards by implementing ISO validation and YANG protocols.</p>,
       <p>
-        Improved security by implementing ISO validation and YANG protocols for compliance with Arista’s network
-        standards.
+        Implemented unit and smoke testing suites using Mockito and Pytest, integrating with Jenkins CI pipelines to
+        ensure the reliability of the data provisioning system.
       </p>,
     ],
     isWorkExperience: true,
-    skills: ["Python", "Docker", "SQL"],
+    skills: [],
   },
   {
     id: "01052024",
-    description:
-      "Teaching Assistant: Led weekly labs for Algorithms and Data Structures II while studying at the University of Victoria.",
+    description: (
+      <>
+        Teaching Assistant: Led weekly labs for <strong>Algorithms and Data Structures II</strong> while studying at the
+        University of Victoria.
+      </>
+    ),
     date: "May 2024 - Aug 2024",
     isWorkExperience: false,
   },
@@ -118,8 +162,12 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
   },
   {
     id: "01052023",
-    description:
-      "Teaching Assistant: Led weekly labs for Algorithms and Data Structures II while studying at the University of Victoria.",
+    description: (
+      <>
+        Teaching Assistant: Led weekly labs for <strong>Algorithms and Data Structures II</strong> while studying at the
+        University of Victoria.
+      </>
+    ),
     date: "May 2023 - Dec 2023",
     isWorkExperience: false,
   },
@@ -129,22 +177,34 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
     position: "Software Developer Intern",
     location: "Vancouver BC, Canada",
     date: "Sep 2022 - Apr 2023",
+    brief: (
+      <p>
+        <strong>
+          Visier faces increasing client demand for a scalable data export and a secure solution for managing and
+          anonymizing sensitive customer data.
+        </strong>
+        &nbsp;I upgraded the data export system to handle large-scale, multi-file operations and developed a secure
+        de-identification pipeline to ensure data privacy.
+      </p>
+    ),
     achievements: [
       <p>
-        Developed secure code for data processing pipeline using Scala, TypeScript, SQL, Mockito, Docker, AWS S3 to
-        transform customer data from 15,000+ organizations into a validated, structured format.
+        Developed data pipeline using Scala, TypeScript, SQL, Docker, and AWS S3 to validate and structure customer data
+        from <strong>15,000+</strong> organizations.
       </p>,
       <p>
-        Streamlined customer data downloads by introducing three methods—single, multiple, and combined—for CSV, XLSX,
-        and Parquet formats, reducing network traffic by 90% through efficient zip compression.
+        Created CSV/XLSX/Parquet export options with single, multiple, and combined modes to support multi-file download
+        needs.
       </p>,
       <p>
-        Built De-Identification Tool to anonymize personal data, manage backups, and enforce secure restoration/deletion
-        process, safeguarding over 12 million customer records.
+        Reduced network traffic by <strong>90%</strong> using efficient zip compression for large-scale data exports.
+      </p>,
+      <p>
+        Built de-identification to anonymize <strong>12M+</strong> records with backup, deletion, and restore workflows.
       </p>,
     ],
     isWorkExperience: true,
-    skills: ["Python", "Docker", "SQL"],
+    skills: [],
   },
   {
     id: "01012022",
@@ -158,17 +218,31 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
     position: "Software Test Engineer Intern",
     location: "Victoria BC, Canada",
     date: "Sep 2021 - Dec 2021",
+    brief: (
+      <p>
+        <strong>
+          VertiGIS needed to ensure that Patch 5.15 is stable and high-quality for the upcoming release of the Geocortex
+          Web/Mobile Designer.
+        </strong>
+        &nbsp;I created automated tests for new features and executed comprehensive regression testing to guarantee the
+        patch quality.
+      </p>
+    ),
     achievements: [
       <p>
-        Created automated and manual testing scripts with TypeScript, WebdriverIO, Jest to increase test coverage of
-        Geocortex Web/Mobile Designer software that serves over 5,000 customers across industries.
+        Created automated tests with TypeScript, WebdriverIO, and Jest to improve test coverage of Geocortex Web/Mobile
+        Designer software.
       </p>,
       <p>
-        Boosted team productivity by 14% by raising QA bug detection coverage from 50% to 64% during regression testing.
+        Boosted QA bug detection coverage from <strong>50%</strong> to <strong>64%</strong>, increasing team
+        productivity by <strong>14%</strong> during patch 5.15 regression testing
+      </p>,
+      <p>
+        Executed functional tests — addressing <strong>30+</strong> issues — to enhance the product quality.
       </p>,
     ],
     isWorkExperience: true,
-    skills: ["Python", "Docker", "SQL"],
+    skills: [],
   },
   {
     id: "01052021",
@@ -182,15 +256,26 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
     position: "Software Developer Intern",
     location: "Victoria BC, Canada",
     date: "Jan 2021 - Apr 2021",
+    brief: (
+      <p>
+        <strong>
+          Ruboss’s e-commerce platform (Leanpub) relies on outdated legacy technologies, requiring a next-generation
+          rebuild to ensure long-term competitiveness.
+        </strong>
+        &nbsp;I upgraded the legacy codebase with modern frameworks, making the platform easier to maintain and adapt
+        for future needs.
+      </p>
+    ),
     achievements: [
       <p>
-        Modernized Leanpub storefront by migrating from legacy JavaScript, React Classes, REST APIs to next generation
-        with TypeScript, React Hooks, EmotionJS, GraphQL/Apollo, supporting over 2 million users.
+        Migrated Leanpub storefront to modern stacks with TypeScript, React Hooks, EmotionJS, and GraphQL/Apollo to
+        support <strong>2M+</strong> users.
       </p>,
-      <p>Created reusable React components to reduce redundancy in hierarchical navigation menu codebase.</p>,
+      <p>Created reusable React components to reduce redundancy in hierarchical navigation menu.</p>,
+      <p> Integrated CSS and JavaScript code with EmotionJS to increase their readability and reusability.</p>,
     ],
     isWorkExperience: true,
-    skills: ["Python", "Docker", "SQL"],
+    skills: [],
   },
   {
     id: "01082019",
@@ -204,7 +289,7 @@ const testimonialContent: TestimonialContent[] = [
   {
     id: "01",
     testimonial:
-      "I was particularly impressed by his structured approach to prototyping— Poom thoughtfully evaluated multiple options and clearly laid out the trade-offs.",
+      "I was particularly impressed by his structured approach to prototyping — Poom thoughtfully evaluated multiple options and clearly laid out the trade-offs.",
     source: "Recommendation",
     company: "Kinsol",
     date: "Apr 2025",
@@ -220,7 +305,7 @@ const testimonialContent: TestimonialContent[] = [
   {
     id: "03",
     testimonial:
-      "Poom demonstrated well that he stepped out of his comfort zone by learning new domains, new technology stacks, and different software development practices— all highly focused on quality.",
+      "Poom demonstrated well that he stepped out of his comfort zone by learning new domains, new technology stacks, and different software development practices — all highly focused on quality.",
     source: "Final Evaluation",
     company: "Arista Network",
     date: "Dec 2024",
@@ -238,26 +323,72 @@ const testimonialContent: TestimonialContent[] = [
 const projectContent: ProjectContent[] = [
   {
     id: "01",
-    title: "Nightrader, Stock Trading Platform",
-    description:
-      "Built a full-stack trading platform with a Go backend and React frontend for \
-        FIFO matching, order executions, and wallet transactions, scaling it via Microservices, Docker, \
-        Concurrency, and RabbitMQ to support 5,000+ concurrent users and 100,000+ transactions.",
-    url: project.nightrader,
-    skills: ["Golang", "JavaScript", "React", "Docker", "PostgreSQL", "API"],
-    image: "/project/Nightrader.jpg",
+    title: "Bias Detection in LLMs",
+    description: (
+      <>
+        Software that analyzes 100,000+ unique words to quantify gender and racial biases in large language models.
+        Visualizes the patterns across embeddings from Microsoft, OpenAI, Google, Cohere, and BGE, with findings{" "}
+        <strong>published by Springer</strong> and <strong>won the JCURA award</strong>.
+      </>
+    ),
+    url: project.biasanalyzer,
+    skills: ["Python", "Pandas", "NumPy", "Matplotlib", "LLM API"],
+    image: "/project/BiasAnalyzer.png",
   },
   {
     id: "02",
-    title: "BiasAnalyzer, Bias Detection in LLMs",
-    description:
-      "Won the JCURA award for developing software with Python to analyze 100,000+ words \
-        for gender and race bias detection, quantifying and visualizing the real-world impacts of societal \
-        biases using Pandas, NumPy, Matplotlib, and word embeddings from Microsoft, OpenAI, Google, Cohere, \
-        and BGE models, with findings published by Springer Media.",
-    url: project.biasanalyzer,
-    skills: ["Python", "Pandas", "NumPy", "Matplotlib", "API"],
-    image: "/project/BiasAnalyzer.jpg",
+    title: "Stock Trading Platform",
+    description: (
+      <>
+        A microservices trading platform that processes authentication, FIFO order matching, order execution, and
+        wallet/stock transactions at scale. Supports <strong>5,000+</strong> concurrent users and over{" "}
+        <strong>100,000+</strong> transactions.
+      </>
+    ),
+    url: project.nightrader,
+    skills: ["Go", "React", "PostgreSQL", "Docker", "RabbitMQ", "JMeter"],
+    image: "/project/Nightrader.png",
+  },
+  {
+    id: "03",
+    title: "Phishing Email Evaluator",
+    description: (
+      <>
+        An email analysis tool that evaluates potential phishing attempts using algorithms based on Social Engineering
+        Red Flags. Processes .eml files and visualizes risk assessments through interactive charts and graphs.
+      </>
+    ),
+    url: project.phishingEmailEvaluator,
+    skills: ["Python", "Flask API", "JavaScript", "React", "Heroku"],
+    image: "/project/PhishingEvaluator.png",
+  },
+  {
+    id: "04",
+    title: "Cover Letter Generator",
+    description: (
+      <>
+        Software that creates tailored cover letters based on custom input to streamline the application process. Saves{" "}
+        <strong>4–5</strong> minutes per application by automating manual writing and formatting, ensuring error-free
+        and consistent outputs.
+      </>
+    ),
+    url: project.coverletterGenerator,
+    skills: ["Python", "Regex", "Python-docx"],
+    image: "/project/CoverletterGen.png",
+  },
+  {
+    id: "05",
+    title: "Fact Checker",
+    description: (
+      <>
+        A tool that scrapes Twitter Tweets or custom text inputs to distinguish facts from opinions using OpenAI's
+        Davinci-003 model. Flags inaccuracies and suggests corrections.{" "}
+        <em>The Tweet scraper and Davinci-003 model are deprecated.</em>
+      </>
+    ),
+    url: project.FactChecker,
+    skills: ["NodeJS", "JavaScript", "Express", "Pupperteer", "OpenAI"],
+    image: "/project/FactChecker.png",
   },
 ];
 
@@ -332,7 +463,7 @@ const contents = {
   hero: heroContent,
   about: {
     heading: "About",
-    description: about,
+    description: aboutMe,
   },
   experience: {
     heading: "Experience",

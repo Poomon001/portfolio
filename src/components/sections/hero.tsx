@@ -13,7 +13,7 @@ const StyledHeroSection = styled.section`
   max-width: 1200px;
   padding: 0 2rem;
 
-  @media (min-width: 358px) {
+  @media (min-width: 500px) {
     padding: 0 4rem;
   }
 
@@ -30,7 +30,7 @@ const HeroTitle = styled.h1`
   text-align: left;
   margin: 25px 0px;
 
-  @media (min-width: 358px) {
+  @media (min-width: 500px) {
     font-size: 2.5rem;
   }
 
@@ -40,7 +40,7 @@ const HeroTitle = styled.h1`
 `;
 
 const HeroSubtitle = styled.div`
-  color: #aaa; /* #9ecbf5 */
+  color: #9ecbf5;
   font-size: 1.25rem;
   font-weight: normal;
   font-family: var(--font-sans);

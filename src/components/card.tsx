@@ -59,15 +59,23 @@ const CardBody = styled.div`
 `;
 
 const CardTitle = styled.div`
-  font-size: 1.5rem;
+  font-size: calc(1.25rem + 0.875vw);
   font-weight: 400;
   padding-bottom: 0.25rem;
+
+  @media (min-width: 1152px) {
+    font-size: 1.75rem;
+  }
 `;
 
 const CardText = styled.p`
-  margin-bottom: 0.75rem;
   font-weight: 400;
   color: #374151;
+  font-size: 1rem;
+
+  @media (min-width: 500px) {
+    font-size: 1.25rem;
+  }
 `;
 
 const SkillTag = styled.span`
@@ -75,14 +83,14 @@ const SkillTag = styled.span`
   font-size: 0.875rem;
   padding: 0.4rem 0.75rem;
   border-radius: 0.5rem;
-  margin-right: 0.5rem;
-  margin-top: 0.5rem;
   display: inline-block;
 `;
 
 const SkillsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-top: auto;
+  gap: 0.5rem;
 `;
 
 const Card = ({ title, description, url, skills, image }: ProjectContent) => (
