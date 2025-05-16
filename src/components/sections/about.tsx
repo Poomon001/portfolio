@@ -24,12 +24,18 @@ const Title = styled.h2`
   font-weight: 400;
 `;
 
-const AboutContent = styled.p`
+const AboutContent = styled.div`
   color: #222;
   font-weight: normal;
   max-width: 800px;
   margin: 0 auto;
   font-size: 1rem;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+    text-align: justify;
+  }
 `;
 
 const About = () => {

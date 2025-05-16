@@ -37,16 +37,16 @@ const TimelineSide = styled.div`
 const TimelineDate = styled.div`
   position: absolute;
   width: 18%;
-  font-size: 14px;
+  font-size: 0.875rem;
   text-align: center;
-  right: 893px;
+  right: 908px;
   top: 24px;
 `;
 
 const VerticalDivider = styled.div<{ color: string }>`
   background-color: ${({ color }) => color};
   position: absolute;
-  right: 850px;
+  right: 870px;
   top: 53px;
   width: 1px;
   height: calc(100% - 25px);
@@ -57,7 +57,7 @@ const VerticalDivider = styled.div<{ color: string }>`
 const IconImage = styled.div`
   background-color: white;
   position: absolute;
-  right: 834px;
+  right: 854.5px;
   top: 15px;
   z-index: 2;
   width: 1rem;
@@ -72,7 +72,7 @@ const IconImage = styled.div`
 
 const Icon = styled.img`
   position: absolute;
-  right: 841px;
+  right: 861.5px;
   top: 22px;
   width: 1.2rem;
   height: 1.2rem;
@@ -82,7 +82,7 @@ const Icon = styled.img`
 const BoldIconImage = styled.div<{ color: string }>`
   background-color: ${({ color }) => color};
   position: absolute;
-  right: 841px;
+  right: 861px;
   top: 21px;
   z-index: 2;
   width: 0.75rem;
@@ -96,7 +96,7 @@ const BoldIconImage = styled.div<{ color: string }>`
 const HorizontalDivider = styled.div`
   position: absolute;
   top: 30px;
-  right: 745px;
+  right: 773px;
   z-index: -1;
   background-color: #666;
   height: 3px;
@@ -111,7 +111,7 @@ const TimelineContent = styled.div<{ color: string }>`
   position: relative;
   width: 100%;
   max-width: 800px;
-  padding: 1.5rem 1rem; /* position horizontal lines horizontally */
+  padding: 1.5rem 1.5rem; /* position horizontal lines horizontally */
   border: 1px solid rgba(102, 102, 102, 0.3);
   border-radius: 0.5rem;
   background-color: ${({ color }) => color};
@@ -150,17 +150,20 @@ const TimelineEmptyContent = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 1.5rem;
+  font-size: calc(1.25rem + 0.875vw);
   font-weight: 400;
   padding-bottom: 0.25rem;
+
+  @media (min-width: 1152px) {
+    font-size: 1.75rem;
+  }
 `;
 
 const LocationDate = styled.div`
   color: #666;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 
   @media (min-width: 1152px) {
-    margin-bottom: 1.5rem;
     font-size: 1rem;
   }
 `;
@@ -171,9 +174,12 @@ const RevealDate = styled.span`
   }
 `;
 
-const ExperienceDescription = styled.div`
+const ExperienceDescription = styled.ul`
   text-align: left;
   font-size: 16px;
+  @media (max-width: 768px) {
+    padding: 0 0 0 2rem;
+  }
 `;
 
 const EducationDescription = styled.div`
@@ -227,9 +233,10 @@ const TimelineExperience = (props: ExperienceContent) => {
           {props.location}
           <RevealDate> | {props.date}</RevealDate>
         </LocationDate>
+        {props.brief}
         <ExperienceDescription>
           {props.achievements.map((achievement, index) => (
-            <span key={index}>{achievement}</span>
+            <li key={index}>{achievement}</li>
           ))}
         </ExperienceDescription>
         <TechList>

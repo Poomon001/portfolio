@@ -20,7 +20,7 @@ const useVantaWaves = (ref: RefObject<HTMLElement | null>) => {
         scale: 1.0,
         scaleMobile: 1.0,
         color: 0x0,
-        shininess: 50.0,
+        shininess: 100.0,
         zoom: 0.84,
       });
 

@@ -43,7 +43,8 @@ const SocialRow = styled.div`
   gap: 1rem;
   margin-bottom: 0.5rem;
 
-  @media (min-width: 1398px) {
+  /* include 1440px */
+  @media (min-width: calc(1440px + 1px)) {
     display: none;
   }
 `;

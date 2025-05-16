@@ -24,4 +24,7 @@ export const footer = {
 export const project = {
   nightrader: "https://github.com/Poomon001/day-trader",
   biasanalyzer: "https://github.com/Poomon001/Bias-in-Word-Embeddings",
+  phishingEmailEvaluator: "https://github.com/Poomon001/NewHack-2021",
+  coverletterGenerator: "https://github.com/Poomon001/cover-letter-maker",
+  FactChecker: "https://github.com/Poomon001/auto-fact-checker",
 };

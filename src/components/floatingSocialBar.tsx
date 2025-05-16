@@ -14,7 +14,7 @@ const FloatingBar = styled.div`
   z-index: 10;
   opacity: 0.6;
 
-  @media (max-width: 1398px) {
+  @media (max-width: 1440px) {
     display: none;
   }
 `;
