@@ -57,7 +57,7 @@ const VerticalDivider = styled.div<{ color: string }>`
 const IconImage = styled.div`
   background-color: white;
   position: absolute;
-  right: 854.5px;
+  right: 853.5px;
   top: 15px;
   z-index: 2;
   width: 1rem;
