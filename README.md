@@ -1,42 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Portfolio Website
+
+This is my personal portfolio website to showcases my projects, technical skills, and experience as a software engineer.
+
+Visit: [www.petec.me](https://petec.me) - Deployed on [Vercel](https://vercel.com/).
+
+## Features
+
+- Built with Next.js, React, and TypeScript
+- Styled using styled-components
+- Responsive layout (mobile-friendly)
+- SEO-friendly [Lighthouse Report](./public/lighthouse-report.png)
+- About, Experience, Projects, and Awards sections
+
+## Key Dependencies
+
+This project uses a modern React and Next.js stack with animations, 3D effects, and responsive UI components. Below are some of the core libraries:
+
+- Next.js 15 – Next.js framework for SEO
+- React 19 – React framework
+- Styled Components – component-based CSS-in-JS
+- Framer Motion – Smooth animation handling
+- Vanta.js + Three.js – Interactive animated backgrounds
+- Embla Carousel – Lightweight, accessible carousel library
+- MUI Icons – Scalable React icons from Material UI
+- @vercel/speed-insights – Performance monitoring and insights
+- env-cmd – Load environment variables from custom .env files
 
 ## Getting Started
 
-First, run the development server:
+To Run this project locally:
+
+1.  Run these commands
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-# install daisyUI (pip install)
-
-# install shadUI
-
-# install component-styled (pip install)
+2. Open [http://localhost:3000](http://localhost:3000) to view locally
