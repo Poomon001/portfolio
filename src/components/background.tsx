@@ -14,9 +14,7 @@ const Background = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div ref={vantaRef} style={{ position: "relative", zIndex: 1 }}>
-      <Wrapper $ready={ready} style={{ minHeight: "100vh" }}>
-        {children}
-      </Wrapper>
+      <Wrapper $ready={ready}>{children}</Wrapper>
     </div>
   );
 };

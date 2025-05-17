@@ -101,7 +101,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
         <strong>$30,000</strong> in initial funding.
       </p>,
       <p>
-        Optimized annotation runtime by <strong>72%</strong> across <strong>30,000+</strong> videos using GPU, data
+        Optimized annotation runtime by <strong>72%</strong> for <strong>30,000+</strong> videos using GPU, data
         filters, and distributed computing.
       </p>,
       <p>Dockerized microservices to stabilize pipeline processing across different machines.</p>,
@@ -235,7 +235,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
       </p>,
       <p>
         Boosted QA bug detection coverage from <strong>50%</strong> to <strong>64%</strong>, increasing team
-        productivity by <strong>14%</strong> during patch 5.15 regression testing
+        productivity by <strong>14%</strong> during patch 5.15 regression testing.
       </p>,
       <p>
         Executed functional tests — addressing <strong>30+</strong> issues — to enhance the product quality.
