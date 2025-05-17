@@ -3,6 +3,7 @@ import { Roboto as FontSans } from "next/font/google";
 import { profile, site } from "@/lib/config";
 import StyledComponentsRegistry from "@/lib/registry";
 import "@/styles/globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const fontSans = FontSans({
   variable: "--font-sans",
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </Head>
       <body className={fontSans.variable}>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <SpeedInsights />
       </body>
     </html>
   );
