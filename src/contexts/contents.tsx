@@ -63,7 +63,7 @@ const aboutMe = (
   <>
     <p>
       I built full-stack, data-intensive systems that transform complex data into business impact. My engineering
-      background drives me to break down problems, evaluate trade-offs, and build robust systems — whether in production
+      background drives me to break down problems, evaluate trade-offs, and build robust systems—whether in production
       or at hackathons, where I push my limits and collaborate with other fellows.
     </p>
 
@@ -189,8 +189,8 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
     ),
     achievements: [
       <p>
-        Developed data pipeline using Scala, TypeScript, SQL, Docker, and AWS S3 to validate and structure customer data
-        from <strong>15,000+</strong> organizations.
+        Developed secure data pipeline using Scala, TypeScript, SQL, Docker, and AWS S3 to validate and structure
+        customer data from <strong>15,000+</strong> organizations.
       </p>,
       <p>
         Created CSV/XLSX/Parquet export options with single, multiple, and combined modes to support multi-file download
@@ -200,7 +200,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
         Reduced network traffic by <strong>90%</strong> using efficient zip compression for large-scale data exports.
       </p>,
       <p>
-        Built de-identification to anonymize <strong>12M+</strong> records with backup, deletion, and restore workflows.
+        Built de-identification pipeline to secure <strong>12M+</strong> records with backup/delete/restore workflows.
       </p>,
     ],
     isWorkExperience: true,
@@ -238,7 +238,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
         productivity by <strong>14%</strong> during patch 5.15 regression testing.
       </p>,
       <p>
-        Executed functional tests — addressing <strong>30+</strong> issues — to enhance the product quality.
+        Executed functional tests—addressing <strong>30+</strong> issues—to enhance the product quality.
       </p>,
     ],
     isWorkExperience: true,
@@ -289,7 +289,7 @@ const testimonialContent: TestimonialContent[] = [
   {
     id: "01",
     testimonial:
-      "I was particularly impressed by his structured approach to prototyping — Poom thoughtfully evaluated multiple options and clearly laid out the trade-offs.",
+      "I was particularly impressed by his structured approach to prototyping—Poom thoughtfully evaluated multiple options and clearly laid out the trade-offs.",
     source: "Recommendation",
     company: "Kinsol",
     date: "Apr 2025",
@@ -305,7 +305,7 @@ const testimonialContent: TestimonialContent[] = [
   {
     id: "03",
     testimonial:
-      "Poom demonstrated well that he stepped out of his comfort zone by learning new domains, new technology stacks, and different software development practices — all highly focused on quality.",
+      "Poom demonstrated well that he stepped out of his comfort zone by learning new domains, new technology stacks, and different software development practices—all highly focused on quality.",
     source: "Final Evaluation",
     company: "Arista Network",
     date: "Dec 2024",
