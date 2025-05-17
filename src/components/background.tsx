@@ -4,6 +4,8 @@ import styled from "styled-components";
 
 const Wrapper = styled.div<{ $ready: boolean }>`
   opacity: ${({ $ready }) => ($ready ? 1 : 0)};
+  transition: opacity 0.5s ease-in-out;
+  will-change: opacity;
 `;
 
 const Background = ({ children }: { children: React.ReactNode }) => {
@@ -12,7 +14,9 @@ const Background = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div ref={vantaRef} style={{ position: "relative", zIndex: 1 }}>
-      <Wrapper $ready={ready}>{children}</Wrapper>
+      <Wrapper $ready={ready} style={{ minHeight: "100vh" }}>
+        {children}
+      </Wrapper>
     </div>
   );
 };

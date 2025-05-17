@@ -122,7 +122,7 @@ const Navbar = () => {
     <Nav>
       <NavContainer>
         <Brand href='#'>
-          <img src='/fav/favicon_large.svg' alt='Logo' />
+          <img src='/fav/fav_l.svg' alt='Logo' />
           <span>PC</span>
         </Brand>
 
