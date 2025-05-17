@@ -1,23 +1,61 @@
-export const profile = {
-  full: "Poomrapee" /* site description, name */,
-  first: "Poom" /* hero only */,
-  last: "Chuthamsatid" /* any last name */,
-  email: "poomon2542@gmail.com" /* re-direct link */,
-  github: "https://github.com/Poomon001" /* re-direct link */,
-  linkedin: "https://www.linkedin.com/in/poomrapee-pete-chuthamsatid-04b31119a" /* re-direct link */,
+const MODE = process.env.NEXT_PUBLIC_PROFILE_MODE;
+
+interface Profile {
+  full: string /* site SEO description, name */;
+  first: string /* hero only */;
+  last: string /* any last name */;
+  email: string /* re-direct link */;
+  github: string /* re-direct link */;
+  linkedin: string /* re-direct link */;
+}
+
+interface Site {
+  title: string /* tab title */;
+  titleTemplate: string /* SEO title */;
+  description: string /* SEO description */;
+  url: string /* search link */;
+}
+
+const realProfile = {
+  full: "Poomrapee",
+  first: "Poom",
+  last: "Chuthamsatid",
+  email: "poomon2542@gmail.com",
+  github: "https://github.com/Poomon001",
+  linkedin: "https://www.linkedin.com/in/poomrapee-pete-chuthamsatid-04b31119a",
 };
 
-export const site = {
-  title: "P. Chuthamsatid - Software Developer" /* tab title */,
-  titleTemplate: "poomrapee.com" /* SEO title */,
-  description: `${profile.full}'s portfolio showcasing software development expertise` /* SEO description */,
-  url: "https://www.poomrapee.com" /* search link */,
+const englishProfile = {
+  full: "pete",
+  first: "Pete (Poom)",
+  last: "Chuthamsatid",
+  email: "pete.chutham@gmail.com",
+  github: "https://github.com/Poomon001",
+  linkedin: "https://www.linkedin.com/in/poomrapee-pete-chuthamsatid-04b31119a",
 };
+
+export const profile: Profile = MODE === "english" ? englishProfile : realProfile;
+
+const realSite = {
+  title: "P. Chuthamsatid - Software Developer",
+  titleTemplate: "poomrapee.com",
+  description: `${profile.full}'s portfolio showcasing software development expertise`,
+  url: "https://www.poomrapee.com",
+};
+
+const englishSite = {
+  title: "P. Chuthamsatid - Software Developer",
+  titleTemplate: "petec.me",
+  description: `${profile.full}'s portfolio showcasing software development expertise`,
+  url: "https://www.petec.me",
+};
+
+export const site: Site = MODE === "english" ? englishSite : realSite;
 
 /* footer only */
 export const footer = {
   portfolio: "https://github.com/Poomon001/portfolio",
-  credit: "Created by Poom (Pete) Chuthamsatid powered by Next.js and TypeScript",
+  credit: `Created by ${profile.first} Chuthamsatid powered by Next.js and TypeScript`,
 };
 
 /* context projects */
