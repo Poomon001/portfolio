@@ -97,7 +97,7 @@ const Card = ({ title, description, url, skills, image }: ProjectContent) => (
   <CardContainer>
     <CardLink href={url} target='_blank' rel='noopener noreferrer'>
       <CardImage>
-        <Image src={image}></Image>
+        <Image src={image} alt={title}></Image>
       </CardImage>
       <CardBody>
         <CardTitle>{title}</CardTitle>
