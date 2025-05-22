@@ -14,7 +14,7 @@ import FloatingSocialBar from "@/components/floatingSocialBar";
 
 export default function HomePage() {
   return (
-    <div>
+    <div id='top'>
       <Navbar />
       <ContentsProvider contents={contents}>
         <Hero />

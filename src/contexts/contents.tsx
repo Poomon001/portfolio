@@ -147,8 +147,8 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
     id: "01052024",
     description: (
       <>
-        Teaching Assistant: Led weekly labs for <strong>Algorithms and Data Structures II</strong> while studying at the
-        University of Victoria.
+        Teaching Assistant: Led weekly Java labs for <strong>100+</strong> students in the{" "}
+        <strong>Algorithms II</strong> course while studying full-time.
       </>
     ),
     date: "May 2024 - Aug 2024",
@@ -164,8 +164,8 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
     id: "01052023",
     description: (
       <>
-        Teaching Assistant: Led weekly labs for <strong>Algorithms and Data Structures II</strong> while studying at the
-        University of Victoria.
+        Teaching Assistant: Led weekly Java labs for <strong>200+</strong> students in the{" "}
+        <strong>Algorithms II</strong> course while studying full-time.
       </>
     ),
     date: "May 2023 - Dec 2023",
@@ -407,7 +407,7 @@ const awardContent: AwardContent[] = [
     isSquare: false,
     title: "JCURA Award",
     year: "2025",
-    brief: "Undergraduate Research Award in Machine Learning",
+    brief: "Undergraduate Research Award in LLMs",
   },
   {
     id: "03",
