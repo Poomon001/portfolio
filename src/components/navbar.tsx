@@ -3,6 +3,8 @@
  **/
 import { useState } from "react";
 import styled from "styled-components";
+import useScroll from "@/hooks/scroll";
+import type { Scroll } from "@/hooks/scroll";
 
 const Nav = styled.nav`
   background-color: white;
@@ -118,10 +120,12 @@ const NavItem = styled.div`
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const scrollTo: Scroll = useScroll();
+
   return (
     <Nav>
       <NavContainer>
-        <Brand href='#'>
+        <Brand href='#top' onClick={scrollTo("#top")}>
           <img src='/fav/fav_l.svg' alt='Logo' />
           <span>PC</span>
         </Brand>
@@ -135,16 +139,24 @@ const Navbar = () => {
         <NavMenu className='NavMenu' open={menuOpen}>
           <NavList className='NavList'>
             <NavItem>
-              <a href='#About'>About</a>
+              <a href='#About' onClick={scrollTo("#About")}>
+                About
+              </a>
             </NavItem>
             <NavItem>
-              <a href='#Experience'>Experience</a>
+              <a href='#Experience' onClick={scrollTo("#Experience")}>
+                Experience
+              </a>
             </NavItem>
             <NavItem>
-              <a href='#Projects'>Projects</a>
+              <a href='#Projects' onClick={scrollTo("#Projects")}>
+                Projects
+              </a>
             </NavItem>
             <NavItem>
-              <a href='#Awards'>Awards</a>
+              <a href='#Awards' onClick={scrollTo("#Awards")}>
+                Awards
+              </a>
             </NavItem>
           </NavList>
         </NavMenu>
