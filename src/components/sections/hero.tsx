@@ -44,7 +44,7 @@ const HeroSubtitle = styled.div`
   font-size: 1.25rem;
   font-weight: normal;
   font-family: var(--font-sans);
-  max-width: 784px;
+  max-width: 775px;
 
   @media (min-width: 768px) {
     font-size: 1.5rem;

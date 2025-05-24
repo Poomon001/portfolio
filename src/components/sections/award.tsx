@@ -42,6 +42,9 @@ const AwardGrid = styled.div`
   @media (min-width: 1152px) {
     grid-template-columns: repeat(4, 1fr);
     gap: 5rem;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-rows: 0;
+    overflow: hidden;
   }
 `;
 
