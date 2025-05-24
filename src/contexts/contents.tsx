@@ -54,7 +54,7 @@ interface AwardContent {
 
 const heroContent: HeroContent = {
   heading: `Hi, I'm ${profile.first}`,
-  hook: "Building robust systems that bridges software logic with business needs.",
+  hook: "Building robust systems that bridge software logic with business needs.",
   brief:
     "I am a software engineer delivering data-intensive, end-to-end solutions for e-commerce tech, AI-driven platforms, and data pipelines.",
 };
@@ -62,7 +62,7 @@ const heroContent: HeroContent = {
 const aboutMe = (
   <>
     <p>
-      I built full-stack, data-intensive systems that transform complex data into business impact. My engineering
+      I build full-stack, data-intensive systems that transform complex data into business solutions. My engineering
       background drives me to break down problems, evaluate trade-offs, and build robust systems—whether in production
       or at hackathons, where I push my limits and collaborate with other fellows.
     </p>
@@ -80,29 +80,40 @@ const aboutMe = (
 
 const experienceContent: (ExperienceContent | EducationContent)[] = [
   {
+    id: "01052025",
+    description: (
+      <>
+        Graduating: Bachelor of Software Engineering <strong>With Distinction (First Class Honours)</strong> –
+        University of Victoria.
+      </>
+    ),
+    date: "May 2025 - Jun 2025",
+    isWorkExperience: false,
+  },
+  {
     id: "01012025",
-    company: "Kinsol Research Inc",
+    company: "Kinsol Inc",
     position: "AI Software Developer Intern",
     location: "Victoria BC, Canada",
     date: "Jan 2025 - Apr 2025",
     brief: (
       <p>
         <strong>
-          Kinsol needs to transform its proof-of-concept marine diversity classification pipeline into a
+          Kinsol needed to transform its proof-of-concept marine diversity classification pipeline into a
           production-ready system for the first customer demo.
         </strong>
         &nbsp;I engineered the processing pipeline to ingest raw videos, perform object tracking, and automatically
-        extract highlight moments, enabling a successful live demonstration of the product.
+        extract highlight frames, enabling a successful live demonstration of the product.
       </p>
     ),
     achievements: [
       <p>
-        Developed the vision-based pipeline using Python, Parallelization, and Google Cloud securing{" "}
+        Drove development of the YOLOv8 vision-based pipeline using Python, Parallelization, and Google Cloud securing{" "}
         <strong>$30,000</strong> in initial funding.
       </p>,
       <p>
-        Optimized annotation runtime by <strong>72%</strong> for <strong>30,000+</strong> videos using GPU, data
-        filters, and distributed computing.
+        Optimized annotation runtime by <strong>72%</strong> for <strong>30,000+</strong> videos using pre-filtering,
+        distributed computing, parallelism, and GPUs.
       </p>,
       <p>Dockerized microservices to stabilize pipeline processing across different machines.</p>,
       <p>
@@ -122,8 +133,8 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
     brief: (
       <p>
         <strong>
-          Arista seeks to streamline ISO-based configuration workflows and automated first-boot VM setup to reduce
-          operational overhead and deliver a smoother customer experience.
+          Arista was burdened by complex ISO-based configuration workflows and automated VM first-boot setup, which
+          increased operational overhead and impacted the customer experience.
         </strong>
         &nbsp;I built a workflow for ISO configuration validation, a declarative preview system for ISO metadata and
         contents, and a prototype for declarative ISO generation, improving user interaction efficiency.
@@ -132,12 +143,12 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
     achievements: [
       <p>
         Developed workflows for declarative ISO configuration previews and automated ISO generation using Kotlin,
-        Python, and Docker to support first-boot VM.
+        Python, and Docker to improve provisioning process.
       </p>,
       <p>Enforced Arista network security standards by implementing ISO validation and YANG protocols.</p>,
       <p>
-        Implemented unit and smoke testing suites using Mockito and Pytest, integrating with Jenkins CI pipelines to
-        ensure the reliability of the data provisioning system.
+        Implemented unit and smoke testing suites with Mockito and Pytest, integrated into Jenkins CI pipelines to
+        ensure reliability of the VM first-boot system.
       </p>,
     ],
     isWorkExperience: true,
@@ -156,7 +167,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
   },
   {
     id: "01012024",
-    description: "Ongoing: Continued Software Engineering at the University of Victoria.",
+    description: "Ongoing: Continued Software Engineering studies at the University of Victoria.",
     date: "Jan 2024 - Apr 2024",
     isWorkExperience: false,
   },
@@ -180,7 +191,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
     brief: (
       <p>
         <strong>
-          Visier faces increasing client demand for a scalable data export and a secure solution for managing and
+          Visier faced increasing client demand for a scalable data export and a secure solution for managing and
           anonymizing sensitive customer data.
         </strong>
         &nbsp;I upgraded the data export system to handle large-scale, multi-file operations and developed a secure
@@ -189,7 +200,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
     ),
     achievements: [
       <p>
-        Developed secure data pipeline using Scala, TypeScript, SQL, Docker, and AWS S3 to validate and structure
+        Developed a secure data pipeline using Scala, TypeScript, SQL, Docker, and AWS S3 to validate and structure
         customer data from <strong>15,000+</strong> organizations.
       </p>,
       <p>
@@ -200,7 +211,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
         Reduced network traffic by <strong>90%</strong> using efficient zip compression for large-scale data exports.
       </p>,
       <p>
-        Built de-identification pipeline to secure <strong>12M+</strong> records with backup/delete/restore workflows.
+        Built a de-identification pipeline to secure <strong>12M+</strong> records with backup/delete/restore workflows.
       </p>,
     ],
     isWorkExperience: true,
@@ -208,7 +219,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
   },
   {
     id: "01012022",
-    description: "Ongoing: Continued Software Engineering at the University of Victoria.",
+    description: "Ongoing: Continued Software Engineering studies at the University of Victoria.",
     date: "Jan 2022 - Aug 2022",
     isWorkExperience: false,
   },
@@ -221,8 +232,8 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
     brief: (
       <p>
         <strong>
-          VertiGIS needed to ensure that Patch 5.15 is stable and high-quality for the upcoming release of the Geocortex
-          Web/Mobile Designer.
+          VertiGIS needed to ensure that Patch 5.15 was stable and production-ready for the upcoming release of the
+          Geocortex Web/Mobile Designer.
         </strong>
         &nbsp;I created automated tests for new features and executed comprehensive regression testing to guarantee the
         patch quality.
@@ -246,7 +257,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
   },
   {
     id: "01052021",
-    description: "Ongoing: Continued Software Engineering at the University of Victoria.",
+    description: "Ongoing: Continued Software Engineering studies at the University of Victoria.",
     date: "May 2021 - Aug 2021",
     isWorkExperience: false,
   },
@@ -259,8 +270,8 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
     brief: (
       <p>
         <strong>
-          Ruboss’s e-commerce platform (Leanpub) relies on outdated legacy technologies, requiring a next-generation
-          rebuild to ensure long-term competitiveness.
+          Ruboss’ e-commerce platform (Leanpub) relied on outdated legacy technologies, requiring a next-generation
+          rebuild to strengthen long-term competitiveness.
         </strong>
         &nbsp;I upgraded the legacy codebase with modern frameworks, making the platform easier to maintain and adapt
         for future needs.
@@ -279,7 +290,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
   },
   {
     id: "01082019",
-    description: "Academia: Started Software Engineering at the University of Victoria.",
+    description: "Beginning: Bachelor of Software Engineering – University of Victoria.",
     date: "Sep 2019 - Dec 2020",
     isWorkExperience: false,
   },
@@ -307,7 +318,7 @@ const testimonialContent: TestimonialContent[] = [
     testimonial:
       "Poom demonstrated well that he stepped out of his comfort zone by learning new domains, new technology stacks, and different software development practices—all highly focused on quality.",
     source: "Final Evaluation",
-    company: "Arista Network",
+    company: "Arista Networks",
     date: "Dec 2024",
   },
   {
@@ -322,13 +333,13 @@ const testimonialContent: TestimonialContent[] = [
 
 const projectContent: ProjectContent[] = [
   {
-    id: "01",
+    id: "05",
     title: "Bias Detection in LLMs",
     description: (
       <>
         Software that analyzes 100,000+ unique words to quantify gender and racial biases in large language models.
-        Visualizes the patterns across embeddings from Microsoft, OpenAI, Google, Cohere, and BGE, with findings{" "}
-        <strong>published by Springer</strong> and <strong>won the JCURA award</strong>.
+        Visualizes the patterns across embeddings from Microsoft, OpenAI, Google, Cohere, and BGE —{" "}
+        <strong>this research published by Springer and honored by UVic with the JCURA award</strong>.
       </>
     ),
     url: project.biasanalyzer,
@@ -336,7 +347,7 @@ const projectContent: ProjectContent[] = [
     image: "/project/BiasAnalyzer.png",
   },
   {
-    id: "02",
+    id: "04",
     title: "Stock Trading Platform",
     description: (
       <>
@@ -363,7 +374,7 @@ const projectContent: ProjectContent[] = [
     image: "/project/PhishingEvaluator.png",
   },
   {
-    id: "04",
+    id: "02",
     title: "Cover Letter Generator",
     description: (
       <>
@@ -377,13 +388,13 @@ const projectContent: ProjectContent[] = [
     image: "/project/CoverletterGen.png",
   },
   {
-    id: "05",
+    id: "01",
     title: "Fact Checker",
     description: (
       <>
         A tool that scrapes Twitter Tweets or custom text inputs to distinguish facts from opinions using OpenAI's
         Davinci-003 model. Flags inaccuracies and suggests corrections.{" "}
-        <em>The Tweet scraper and Davinci-003 model are deprecated.</em>
+        <em>The Tweet scraper and Davinci-003 model are depreciated.</em>
       </>
     ),
     url: project.FactChecker,
@@ -393,6 +404,14 @@ const projectContent: ProjectContent[] = [
 ];
 
 const awardContent: AwardContent[] = [
+  {
+    id: "00",
+    icon: "/award/UVic_academia.svg",
+    isSquare: false,
+    title: "Graduated With Distinction",
+    year: "2025",
+    brief: "Top 20% of Software Engineering class",
+  },
   {
     id: "01",
     icon: "/award/springer.svg",
@@ -431,7 +450,7 @@ const awardContent: AwardContent[] = [
     isSquare: true,
     title: "Honorable Mentions",
     year: "2022",
-    brief: "Visier Product Dev Day Hackathon Recognition",
+    brief: "Visier Product Dev Day Hackathon",
   },
   {
     id: "06",
@@ -455,7 +474,7 @@ const awardContent: AwardContent[] = [
     isSquare: false,
     title: "Excellence in Math Award",
     year: "2019",
-    brief: "Outstanding Performance on The Fermat Math Contest",
+    brief: "Outstanding Performance on Math Contest",
   },
 ];
 
