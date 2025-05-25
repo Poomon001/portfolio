@@ -133,8 +133,8 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
     brief: (
       <p>
         <strong>
-          Arista was burdened by complex ISO-based configuration workflows and automated VM first-boot setup, which
-          increased operational overhead and impacted the customer experience.
+          Arista required a simplified solution for ISO-based configuration and automated VM first-boot workflows to
+          reduce operational overhead and enhance the customer experience.
         </strong>
         &nbsp;I built a workflow for ISO configuration validation, a declarative preview system for ISO metadata and
         contents, and a prototype for declarative ISO generation, improving user interaction efficiency.
