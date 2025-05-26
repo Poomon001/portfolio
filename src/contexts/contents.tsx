@@ -246,7 +246,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
       </p>,
       <p>
         Boosted QA bug detection coverage from <strong>50%</strong> to <strong>64%</strong>, increasing team
-        productivity by <strong>14%</strong> during patch 5.15 regression testing.
+        productivity by <strong>14%</strong> during Patch 5.15 regression testing.
       </p>,
       <p>
         Executed functional tests—addressing <strong>30+</strong> issues—to enhance the product quality.
@@ -351,9 +351,9 @@ const projectContent: ProjectContent[] = [
     title: "Stock Trading Platform",
     description: (
       <>
-        A microservices trading platform that processes authentication, FIFO order matching, order execution, and
-        wallet/stock transactions at scale. Supports <strong>5,000+</strong> concurrent users and over{" "}
-        <strong>100,000+</strong> transactions.
+        A microservices trading platform that processes authentication, FIFO order matching, order execution, and asset
+        transactions at scale. Supports <strong>5,000+</strong> concurrent users and over <strong>100,000+</strong>{" "}
+        transactions.
       </>
     ),
     url: project.nightrader,
