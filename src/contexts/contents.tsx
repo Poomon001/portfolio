@@ -398,7 +398,7 @@ const projectContent: ProjectContent[] = [
       </>
     ),
     url: project.FactChecker,
-    skills: ["NodeJS", "JavaScript", "Express", "Pupperteer", "OpenAI"],
+    skills: ["Node.js", "JavaScript", "Express", "Pupperteer", "OpenAI"],
     image: "/project/FactChecker.png",
   },
 ];
