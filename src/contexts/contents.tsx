@@ -93,7 +93,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
   {
     id: "01012025",
     company: "Kinsol Inc",
-    position: "AI Software Developer Intern",
+    position: "AI Software Developer Co-op",
     location: "Victoria BC, Canada",
     date: "Jan 2025 - Apr 2025",
     brief: (
@@ -127,7 +127,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
   {
     id: "01092024",
     company: "Arista Networks",
-    position: "Software Developer Intern",
+    position: "Software Developer Co-op",
     location: "Vancouver BC, Canada",
     date: "Sep 2024 - Dec 2024",
     brief: (
@@ -185,7 +185,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
   {
     id: "01092022",
     company: "Visier Inc",
-    position: "Software Developer Intern",
+    position: "Software Developer Co-op",
     location: "Vancouver BC, Canada",
     date: "Sep 2022 - Apr 2023",
     brief: (
@@ -226,7 +226,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
   {
     id: "01092021",
     company: "VertiGIS North America",
-    position: "Software Test Engineer Intern",
+    position: "Software Test Engineer Co-op",
     location: "Victoria BC, Canada",
     date: "Sep 2021 - Dec 2021",
     brief: (
@@ -264,7 +264,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
   {
     id: "01012021",
     company: "Ruboss Technology",
-    position: "Software Developer Intern",
+    position: "Software Developer Co-op",
     location: "Victoria BC, Canada",
     date: "Jan 2021 - Apr 2021",
     brief: (
