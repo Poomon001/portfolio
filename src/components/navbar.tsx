@@ -126,7 +126,6 @@ const Navbar = () => {
     <Nav>
       <NavContainer>
         <Brand href='#top' onClick={scrollTo("#top")}>
-          <img src='/fav/fav_l.svg' alt='Logo' />
           <span>PC</span>
         </Brand>
 
