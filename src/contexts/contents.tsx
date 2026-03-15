@@ -81,9 +81,9 @@ const aboutMe = (
 const experienceContent: (ExperienceContent | EducationContent)[] = [
   {
     id: "01092025",
-    company: "Agoda, a Booking Holdings company",
-    position: "BI Developer",
-    location: "Bangkok, Thailand",
+    company: "Agoda — Booking Holdings",
+    position: "Data Engineer (BI Data)",
+    location: "Remote",
     date: "Sep 2025 - Present",
     brief: (
       <p>
@@ -91,8 +91,7 @@ const experienceContent: (ExperienceContent | EducationContent)[] = [
           Agoda, a Booking Holdings company, acquired Rocketmiles and needed to consolidate their AWS Redshift datasets
           into Agoda’s Hadoop-based data warehouse.
         </strong>
-        &nbsp;I contributed to ETL pipelines migrating date ensuring data integrity, accuracy, and cost-efficient
-        storage.
+        &nbsp;I contributed to ETL pipelines migrating date ensuring data integrity, accuracy, and cost-efficiency.
       </p>
     ),
     achievements: [],
